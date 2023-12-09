@@ -2,16 +2,15 @@
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  font-size: 16px;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+
+  scroll-behavior: smooth;
 }
 
 a {
@@ -29,22 +28,103 @@ body {
 
   #pageTop {
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+
+    box-sizing: border-box;
+    border: solid white;
+    border: solid blue;
+
+    height: 100px;
+    width: 100%;
+    height: 500px;
+    margin-bottom: 1em;
+
+
+    .navigation {
+      width: 100%;
+      box-sizing: border-box;
+      border: solid blue;
+      position: fixed;
+      top: 0;
+ 
+  
+      .navigationList {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        list-style: none;
+      }
+    }
+
+    .titleContainer {
+      border: solid blue;
+    }
+  }
+
+  
+
+  main {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    align-items: center;
+
+  #home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: solid blue;
+    width: 50%;
+    height: 300px;
+  }
+
+
+  #aboutMe {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: solid blue;
+    width: 50%;
+    height: 300px;
+  }
+
+  #myProjects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: solid blue;
+    width: 50%;
+    height: 300px;
+  }
+
+  #contactMe  {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: solid blue;
+    width: 50%;
+    height: 300px;
+  }
+
+
+  #pageBottom {
+    display: flex; 
     align-items: center;
     justify-content: center;
     box-sizing: border-box;
-    border: solid white;
-    height: 100px;
+    border: solid blue;
+    width: 100%;
+  }
 
-    .navigation {
-      display: flex;
-      align-items: center;
-      justify-content: space-evenly;
-      border: solid white;
-      width: 80%;
-      padding: 1em;;
-    }
+  
+
 
   }
+
+  
 }
 
 h1 {
