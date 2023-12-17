@@ -4,16 +4,22 @@
 #landingPage {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
+  gap: 1em;
   box-sizing: border-box;
   height: 100vh;
   
-  background-image:  linear-gradient(to left, rgba(114, 9, 183, 0.3), rgb(247, 37, 133, 0.3)), url("/src/img/cup-of-coffee.jpg");
+  background-image:  linear-gradient(to left, rgba(v.$dominant-color, 0.3), rgba(v.$accent-color, 0.3)), url("/src/img/cup-of-coffee.jpg");
  
   background-repeat: no-repeat;
   background-size: cover;
 
+  @include mixins.desktop() {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 
   .navigation {
     display: flex;
@@ -49,6 +55,14 @@
         color: whitesmoke;
       }
 
+
+      .switchContainer {
+        display: flex;
+        align-items: center;
+        gap: 1em;
+        padding: 0.5em;
+      }
+
       
     }
   }
@@ -60,11 +74,17 @@
     padding: 2em;
     text-align: center;
     box-sizing: border-box;
+    margin-top: 120px;
+
+    @include mixins.desktop() {
+      margin-top: 0;
+    }
 
     .presentation {
       color: whitesmoke;
       font-family: 'Caveat', cursive;
       font-size: 4em;
+      margin: 0;
 
       @include mixins.desktop() {
         font-size: 6em;
