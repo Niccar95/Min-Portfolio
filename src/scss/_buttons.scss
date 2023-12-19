@@ -2,6 +2,8 @@
 @use "mixins";
 
 
+
+
 .resumeButton {
   box-sizing: border-box;
   padding: 10px 15px;
@@ -18,23 +20,6 @@
     font-size: 1.2em;
     padding: 12px 15px;
   }
-}
-
-
-
-.modeSwitch {
-  position: relative;
-  display: inline-block;
-  width: 60px;
-  height: 34px;
-
-  .modeInput {
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-
-
 }
 
 
@@ -60,6 +45,7 @@
   background-color: white;
   -webkit-transition: .4s;
   transition: .4s;
+  transform: translateX(0); 
 }
 
 input:checked + .slider {
