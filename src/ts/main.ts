@@ -17,5 +17,11 @@ const navigationList = document.querySelector(".navigationList");
 hamburger?.addEventListener("click", () => {
   hamburger.classList.toggle("active");
   navigationList?.classList.toggle("active");
-
 })
+
+const navLink = document.querySelectorAll(".navLink");
+
+navLink.forEach(link => link.addEventListener("click", () => {
+  hamburger?.classList.remove("active");
+  navigationList?.classList.remove("active");
+}));
