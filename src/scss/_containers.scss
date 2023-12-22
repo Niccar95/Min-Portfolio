@@ -32,6 +32,7 @@
     top: 0;
     color: whitesmoke;
     z-index: 100;
+    transition: all 0.5s;
 
     .hamburger {
       display: block;
@@ -100,7 +101,6 @@
       .navListItem {
         text-align: center;
         width: 100%;
-        border-bottom: solid 0.5px whitesmoke;
 
         @include mixins.desktop() {
         width:initial;
@@ -130,7 +130,7 @@
     .navigationList.active {
       right: 0;
       z-index: 101;
-      background-color: rgba(45, 45, 45, 0.85);
+      background-color: rgba(45, 45, 45, 0.9);
     }
     
     .switchContainer {
@@ -153,16 +153,15 @@
       display: inline-block;
       width: 60px;
       height: 34px;
-    
+      
       .modeInput {
       opacity: 0;
       width: 0;
       height: 0;
     }
-    }
-    }
-
   }
+}
+}
 
   #hero {
     display: flex;
@@ -186,15 +185,15 @@
       @include mixins.desktop() {
         font-size: 6em;
       }
-    }
-
-   
+    } 
   } 
+
+  .navScrolled {
+    background-color: rgba(45, 45, 45, 0.9);
+  }
 }
 
-.title {
-  font-family: v.$heading-font-family;
-}
+
 
 #aboutMe {
   display: flex;
@@ -202,6 +201,19 @@
   align-items: center;
   border: solid blue;
   height: 100vh;
+  
+  .title {
+  font-family: v.$heading-font-family;
+  font-size: 2em;
+}
+
+
+.descriptionContainer {
+  box-sizing: border-box;
+  width: 70%;
+  padding: 0.5em;
+  overflow-y: scroll;
+}
 }
 
 #myProjects {

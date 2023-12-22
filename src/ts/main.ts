@@ -25,3 +25,14 @@ navLink.forEach(link => link.addEventListener("click", () => {
   hamburger?.classList.remove("active");
   navigationList?.classList.remove("active");
 }));
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY >= 56) {
+    navigation.classList.add("navScrolled");
+  }
+
+  if (window.scrollY < 56) {
+    navigation.classList.remove("navScrolled");
+  }
+
+});
