@@ -12,10 +12,10 @@
 
 :root {
   font-family: v.$base-font-family;
+  font-size: v.$base-font-size;
   line-height: 1.5;
   font-weight: 400;
   overflow-x: hidden;
-
   scroll-behavior: smooth;
   scroll-padding: var(--scroll-padding, 5rem);
 }
@@ -23,7 +23,6 @@
 
 body {
   margin: 0;
-
 }
 
 

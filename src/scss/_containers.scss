@@ -199,20 +199,72 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: solid blue;
-  height: 100vh;
-  
-  .title {
-  font-family: v.$heading-font-family;
-  font-size: 2em;
-}
-
+  height: 100vh; 
+  background-color: whitesmoke;
 
 .descriptionContainer {
   box-sizing: border-box;
-  width: 70%;
-  padding: 0.5em;
+  padding: 1em;
   overflow-y: scroll;
+
+  @include mixins.desktop() {
+    overflow-y: hidden;
+    width: 70%;
+  }
+
+  .aboutHeader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 200px;
+    background-image: linear-gradient(to left, rgba(v.$dominant-color, 0.3), rgba(v.$accent-color, 0.3)), url("/src/img/open-book.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-mask-image: linear-gradient(
+      rgba(0, 0, 0,  1) 40%, 
+      rgba(0, 0, 0, 0.5) 70%, 
+      rgba(0, 0, 0,  0)
+    );
+    mask-image: linear-gradient(
+      rgba(0, 0, 0, 1) 40%, 
+      rgba(0, 0, 0, 0.5) 70%, 
+      rgba(0, 0, 0, 0)
+    );
+
+    @include mixins.desktop() {
+      align-items: flex-start;
+      width: 100%;
+      height: 500px;
+      background-repeat: no-repeat;
+      background-size: cover;
+
+      -webkit-mask-image: linear-gradient(
+      rgba(0, 0, 0,  1) 60%, 
+      rgba(0, 0, 0, 0.5) 70%, 
+      rgba(0, 0, 0,  0)
+    );
+    mask-image: linear-gradient(
+      rgba(0, 0, 0, 1) 60%, 
+      rgba(0, 0, 0, 0.5) 80%, 
+      rgba(0, 0, 0, 0)
+    );
+
+    }
+
+    .title {
+      color: whitesmoke;
+      text-align: center;
+      font-family: v.$heading-font-family;
+      font-size: calc(v.$heading-font-size*1.5);
+      margin: 0;
+
+      @include mixins.desktop() {
+        margin-top: 1em;
+        font-size: calc(v.$heading-font-size*2);
+      }
+    }
+  }
 }
 }
 
