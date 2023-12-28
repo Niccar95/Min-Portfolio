@@ -26,13 +26,35 @@ navLink.forEach(link => link.addEventListener("click", () => {
   navigationList?.classList.remove("active");
 }));
 
+
 window.addEventListener("scroll", () => {
-  if (window.scrollY >= 56) {
+  if (window.scrollY > 0) {
     navigation.classList.add("navScrolled");
   }
 
-  if (window.scrollY < 56) {
+  if (window.scrollY === 0) {
     navigation.classList.remove("navScrolled");
   }
 
 });
+
+let lastScrollY = window.scrollY;
+
+window.addEventListener("scroll", () => {
+  if (lastScrollY < window.scrollY) {
+  console.log("ner");
+  navigation.classList.add("hideNav");
+}
+
+else {
+  console.log("upp");
+  navigation.classList.remove("hideNav");
+}
+lastScrollY = window.scrollY;  
+
+
+});
+
+
+
+

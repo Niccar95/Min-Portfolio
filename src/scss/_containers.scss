@@ -187,6 +187,10 @@
   .navScrolled {
     background-color: rgba(45, 45, 45, 0.9);
   }
+
+  .hideNav {
+    opacity: 0;
+  }
 }
 
 #aboutMe {
@@ -265,6 +269,10 @@
     justify-content: center;
     width: 100%;
     height: 40%;
+
+    @include mixins.desktop() {
+      gap: 1.5em;
+    }
     
     .myImage {
       width: 8em;
@@ -326,10 +334,14 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border-bottom: solid black;
+    border-bottom: solid rgba(45, 45, 45, 0.3);
     width: 100%;
     height: 20%;
     gap: 1.5em;
+
+    @include mixins.desktop() {
+      border-bottom: none;
+    }
     
     .skillList {
       display: flex; 
@@ -342,6 +354,16 @@
     @include mixins.desktop() {
       justify-content:center;
       gap: 4em;
+    }
+  }
+
+  .skillIcon {
+    height: 40px;
+    width: 40px;
+
+    @include mixins.desktop(){
+      height: 70px;
+      width: 70px;
     }
   }
 }
