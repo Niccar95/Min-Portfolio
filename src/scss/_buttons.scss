@@ -1,5 +1,5 @@
 @use "variables" as v;
-@use "mixins";
+@use "breakpoints";
 
 
 
@@ -15,7 +15,7 @@
   cursor: pointer;
   transition: all 0.3s;
 
-  @include mixins.desktop() {
+  @include breakpoints.desktop() {
     font-size: 1em;
     padding: 12px 50px;
   }
@@ -32,8 +32,6 @@
   background-color: rgba(45, 45, 45, 0.3);
 
 }
-
-
 
 .slider {
   position: absolute;

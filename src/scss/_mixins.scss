@@ -1,13 +1,15 @@
 
-
-@mixin tablet {
-  @media screen and (min-width: 768px) {
-    @content;
-  }
+@mixin verticalCenterFlex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-@mixin desktop {
-  @media screen and (min-width: 1200px) {
-    @content;
-  }
+@mixin centeredFlexRow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
+
+
