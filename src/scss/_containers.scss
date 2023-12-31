@@ -287,11 +287,21 @@
       list-style: none;
       gap: 1em;
 
+      .socialIconContainer {
+        display: flex; 
+        width: 30px;
+        height: 30px;
+        align-items: center;
+        justify-content: center;
+      
+
       .socialIcon {
         width: 25px;
+        height: 25px;
       }
     }
-   }
+  }
+}
 
 
    .imageSection {
@@ -410,12 +420,12 @@
       display: flex; 
       flex-wrap: wrap;
       align-items: center;
-      justify-content: space-between;
+      justify-content: center;
+      gap: 1.5em;
       list-style: none;
       width: 100%;
 
     @include breakpoints.desktop() {
-      justify-content: center;
       gap: 4em;
     }
   }
