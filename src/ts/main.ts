@@ -1,14 +1,19 @@
 import '../scss/style.scss'
 
+
+//Vid click på nav länk. scrolla ner till sektion
+
+const mainSection = document.querySelector(".mainSection") as HTMLHtmlElement;
 const navigation = document.querySelector(".navigation") as HTMLHtmlElement;
 
-const navigationHeight = navigation.offsetHeight;
+const mainSectionHeight = mainSection.offsetTop;
 
 document.documentElement.style.setProperty (
   "--scroll-padding", 
-  navigationHeight + "px"
-)
+  mainSectionHeight + "px"
+);
 
+//Hamburgarmeny för mobilversion
 
 const hamburger = document.querySelector(".hamburger");
 
@@ -27,6 +32,8 @@ navLink.forEach(link => link.addEventListener("click", () => {
 }));
 
 
+//Lägga till/ta bort nav bakgrundsfärg
+
 window.addEventListener("scroll", () => {
   if (window.scrollY > 0) {
     navigation.classList.add("navScrolled");
@@ -37,6 +44,8 @@ window.addEventListener("scroll", () => {
   }
 
 });
+
+//Gömma nav när man scrollar ner. Visa den när man scrollar upp
 
 let lastScrollY = window.scrollY;
 
