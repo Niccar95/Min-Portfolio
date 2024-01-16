@@ -60,8 +60,6 @@ else {
   navigation.classList.remove("hideNav");
 }
 lastScrollY = window.scrollY;  
-
-
 });
 
 
