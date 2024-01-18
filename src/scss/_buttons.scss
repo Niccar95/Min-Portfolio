@@ -80,13 +80,35 @@ input:checked + .slider:before {
   border-radius: 50%;
 }
 
+.viewAllButton {
+  padding: 8px 20px;
+  border-radius: 2em;
+  font-size: 0.8em;
+  border: 0.5px solid v.$accent-color;
+  box-shadow: 0 0 8px v.$accent-color;
+  background-color: transparent;
+  cursor: pointer;
+  transition: all 0.3s; 
+}
+
+.viewAllButton:hover {
+  border-color: v.$accent-color;
+  color: v.$accent-color;
+  box-shadow: 0 0 20px v.$accent-color;
+
+}
+
+.viewAllButton:active {
+  background-color: rgba(45, 45, 45, 0.1);
+}
+
+
 .readMoreButton {
   padding: 10px 30px;
   border-radius: 2em;
   font-size: 0.8em;
-  border: solid whitesmoke;
-  box-shadow: 0 0 12px v.$accent-color;
-  color: whitesmoke;
+  border: 0.5px solid v.$accent-color;
+  box-shadow: 0 0 8px v.$accent-color;
   background-color: transparent;
   cursor: pointer;
   transition: all 0.3s; 
@@ -100,5 +122,5 @@ input:checked + .slider:before {
 }
 
 .readMoreButton:active {
-  background-color: rgba(45, 45, 45, 0.3);
+  background-color: rgba(45, 45, 45, 0.1);
 }
