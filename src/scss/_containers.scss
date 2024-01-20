@@ -215,9 +215,8 @@
     );
 
     @include breakpoints.desktop() {
-      align-items: flex-start;
+      align-items: center;
       width: 100%;
-      height: 200px;
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center;
@@ -242,7 +241,6 @@
       font-size: calc(v.$heading-font-size*1.5);
   
       @include breakpoints.desktop() {
-        margin-top: 0.8em;
         font-size: calc(v.$heading-font-size*2);
       }
     }
@@ -443,16 +441,12 @@
 }
 
 #myProjects {
-  display: flex;
-  flex-direction: column;
+  @include mixins.verticalCenterFlex;
   justify-content: space-between;
   height: 100vh; 
   background-color: whitesmoke;
   padding: 1em;
-
-  @include mixins.verticalCenterFlex;
-  border: solid blue;
-  height: 100vh;
+  
 
   .aboutHeader {
     display: flex;
@@ -477,9 +471,8 @@
     );
 
     @include breakpoints.desktop() {
-      align-items: flex-start;
+      align-items: center;
       width: 100%;
-      height: 200px;
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center;
@@ -504,7 +497,6 @@
       font-size: calc(v.$heading-font-size*1.5);
   
       @include breakpoints.desktop() {
-        margin-top: 0.8em;
         font-size: calc(v.$heading-font-size*2);
       }
     }
@@ -513,14 +505,18 @@
   .featuredContainer {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     width: 100%;
+
+    @include breakpoints.desktop() {
+      width: 90%;
+    }
 
     .smallHeading {
       font-family: v.$heading-font-family;
       font-size: 1.2em;
       display: inline-block;
     }
-
   }
 
   .projectsGallery {
@@ -531,12 +527,23 @@
     grid-template-columns: auto;
     grid-template-rows: 50% 50%;
 
+    @include breakpoints.desktop() {
+      @include mixins.centeredFlexRow;
+      gap: 1em;
+      width: 90%;
+    }
+
     .projectContainer {
+      position: relative;
       display: flex;
       width: 100%;
       border-radius: 0.5em;
       box-shadow: 0px 0px 2px 2px rgba(0, 0, 0 , 0.2);
       overflow: hidden;
+
+      @include breakpoints.desktop() {
+        height: 100%;
+      }
 
       .imgContainer {
         width: 50%;
@@ -562,14 +569,34 @@
         align-items: center;
         width: 50%;
         padding: 0.5em;
-
+       
         .projectTitle {
           font-family: v.$heading-font-family;
+          font-size: 1.8em;
         }
   
         .projectSummary {
           font-size: 0.8em;
           text-align: center;
+        }
+
+        .label {
+          position: absolute;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 0.4em;
+          background-color: rgba(grey, 0.6);
+          color: white;
+          border-radius: 0 0.5em 0 0;
+          padding: 0.5em;
+          bottom: 0;
+          left: 0;
+        }
+
+        .codeTag {
+          font-size: 0.8em;
+          font-weight: bold;
         }
       }
     }
