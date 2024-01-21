@@ -88,6 +88,10 @@ input:checked + .slider:before {
   box-shadow: 0 0 8px v.$accent-color;
   cursor: pointer;
   transition: all 0.3s; 
+
+  @include breakpoints.desktop() {
+    font-size: 1em;
+  }
 }
 
 .viewAllButton:hover {
@@ -111,6 +115,10 @@ input:checked + .slider:before {
   box-shadow: 0 0 8px v.$accent-color;
   cursor: pointer;
   transition: all 0.3s; 
+
+  @include breakpoints.desktop() {
+    font-size: 1em;
+  }
 }
 
 .readMoreButton:hover {
