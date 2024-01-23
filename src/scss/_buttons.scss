@@ -107,7 +107,7 @@ input:checked + .slider:before {
 }
 
 
-.readMoreButton {
+.seeProjectButton {
   padding: 10px 30px;
   border-radius: 2em;
   font-size: 0.8em;
@@ -121,12 +121,12 @@ input:checked + .slider:before {
   }
 }
 
-.readMoreButton:hover {
+.seeProjectButton:hover {
   color: v.$accent-color;
   box-shadow: 0 0 20px v.$accent-color;
 }
 
-.readMoreButton:active {
+.seeProjectButton:active {
   border: 5px solid;
   background-color: rgba(v.$accent-color, 0.2);
 }

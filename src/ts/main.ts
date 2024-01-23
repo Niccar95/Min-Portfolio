@@ -62,6 +62,20 @@ else {
 lastScrollY = window.scrollY;  
 });
 
+const modalSection = document.getElementById("modalSection") as HTMLDialogElement;
+const openModalSections = document.querySelectorAll(".openModalSection") as NodeListOf<HTMLElement>;
+const closeModalSection = document.querySelector(".modalCloseButton") as HTMLElement | null;
 
+openModalSections.forEach(openModalSection => {
+  openModalSection.addEventListener("click", () => {
+    modalSection.showModal();
+  });
+});
+
+if (closeModalSection) {
+  closeModalSection.addEventListener("click", () => {
+    modalSection.close();
+  });
+}
 
 

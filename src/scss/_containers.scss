@@ -553,6 +553,7 @@
         transform: skewX(-10deg);
         transform-origin: 100% 0; 
         overflow: hidden;
+        cursor: pointer;
 
         @include breakpoints.desktop() {
           width: 70%;
@@ -647,4 +648,17 @@
   border: solid blue;
   width: 100%;
   height: 70px;
+}
+
+
+#modalSection {
+  max-width: 70%;
+  margin: auto;
+  border: none;
+  padding: 2em;
+}
+
+
+#modalSection::backdrop {
+  background: rgba(v.$navigationColor, 0.6);
 }
