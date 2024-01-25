@@ -130,3 +130,23 @@ input:checked + .slider:before {
   border: 5px solid;
   background-color: rgba(v.$accent-color, 0.2);
 }
+
+.modalCloseButton {
+  padding: 6px 30px;
+  border-radius: 2em;
+  font-size: 0.8em;
+  border: 5px double v.$accent-color;
+  box-shadow: 0 0 8px v.$accent-color;
+  cursor: pointer;
+  transition: all 0.3s; 
+}
+
+.modalCloseButton:hover {
+  color: v.$accent-color;
+  box-shadow: 0 0 20px v.$accent-color;
+}
+
+.modalCloseButton:active {
+  border: 5px solid;
+  background-color: rgba(v.$accent-color, 0.2);
+}

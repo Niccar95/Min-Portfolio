@@ -652,10 +652,24 @@
 
 
 #modalSection {
-  max-width: 70%;
+  max-width: 80%;
   margin: auto;
   border: none;
-  padding: 2em;
+  padding: 0.5em;
+
+  .modalContent {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 0.5em;
+
+    .modalImg {
+      border: 2px solid lightgrey;
+      border-radius: 0.5em;
+      width: 100%;
+      
+    }
+  }
 }
 
 

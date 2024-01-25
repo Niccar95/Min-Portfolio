@@ -62,20 +62,33 @@ else {
 lastScrollY = window.scrollY;  
 });
 
+
 const modalSection = document.getElementById("modalSection") as HTMLDialogElement;
-const openModalSections = document.querySelectorAll(".openModalSection") as NodeListOf<HTMLElement>;
-const closeModalSection = document.querySelector(".modalCloseButton") as HTMLElement | null;
+const openModalSection1 = document.querySelector(".openModalSection1") as HTMLElement;
+const openModalSection2 = document.querySelector(".openModalSection2") as HTMLElement;
+const closeModalSection = document.querySelector(".modalCloseButton") as HTMLElement;
+const modalContent = document.querySelector(".modalContent") as HTMLElement;
+const modalImg = document.createElement("img");
+modalContent.appendChild(modalImg);
 
-openModalSections.forEach(openModalSection => {
-  openModalSection.addEventListener("click", () => {
+modalImg.className = "modalImg";
+
+  openModalSection1.addEventListener("click", () => {
     modalSection.showModal();
+    modalImg.src = "/src/img/pokeSearch.png";
   });
-});
 
-if (closeModalSection) {
+  openModalSection2.addEventListener("click", () => {
+    modalSection.showModal();
+    modalImg.src = "/src/img/todoList.png";
+  });
+
+  
+
   closeModalSection.addEventListener("click", () => {
     modalSection.close();
   });
-}
+
+
 
 
