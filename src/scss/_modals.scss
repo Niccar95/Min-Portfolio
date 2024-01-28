@@ -1,0 +1,36 @@
+@use "variables" as v;
+@use "breakpoints";
+
+#modalSection {
+  max-width: 85%;
+  margin: auto;
+  border: none;
+  padding: 0.5em;
+
+  
+  @include breakpoints.desktop() {
+    max-width: 60%; 
+    padding: 2em;  
+  }
+  
+  .modalContent {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 0.5em;
+
+    @include breakpoints.desktop() {
+      gap: 1.5em;  
+    }
+  
+    .modalImg {
+      border: 2px solid lightgrey;
+      border-radius: 0.5em;
+      width: 100%;   
+    }
+  }
+}
+
+#modalSection::backdrop {
+  background: rgba(v.$navigationColor, 0.6);
+}

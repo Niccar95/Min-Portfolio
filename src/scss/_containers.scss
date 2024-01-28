@@ -1,8 +1,8 @@
 @use "variables" as v;
-
 @use "breakpoints";
-
 @use "mixins";
+@use "modals";
+@use "headers";
 
 #landingPage {
   @include mixins.verticalCenterFlex;
@@ -191,60 +191,6 @@
   height: 100vh; 
   background-color: whitesmoke;
   padding: 1em;
-
-  .aboutHeader {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 20%;
-
-    background-image: linear-gradient(to left, rgba(v.$dominant-color, 0.3), rgba(v.$accent-color, 0.3)), url("/src/img/open-book.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-
-    -webkit-mask-image: linear-gradient(
-      rgba(0, 0, 0,  1) 40%, 
-      rgba(0, 0, 0, 0.5) 70%, 
-      rgba(0, 0, 0,  0)
-    );
-    mask-image: linear-gradient(
-      rgba(0, 0, 0, 1) 40%, 
-      rgba(0, 0, 0, 0.5) 70%, 
-      rgba(0, 0, 0, 0)
-    );
-
-    @include breakpoints.desktop() {
-      align-items: center;
-      width: 100%;
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center;
-
-      -webkit-mask-image: linear-gradient(
-      rgba(0, 0, 0,  1) 60%, 
-      rgba(0, 0, 0, 0.5) 70%, 
-      rgba(0, 0, 0,  0)
-    );
-    mask-image: linear-gradient(
-      rgba(0, 0, 0, 1) 60%, 
-      rgba(0, 0, 0, 0.5) 80%, 
-      rgba(0, 0, 0, 0)
-    );
-
-    }
- 
-    .title {
-      color: whitesmoke;
-      text-align: center;
-      font-family: v.$heading-font-family;
-      font-size: calc(v.$heading-font-size*1.5);
-  
-      @include breakpoints.desktop() {
-        font-size: calc(v.$heading-font-size*2);
-      }
-    }
-  }
 
   .descriptionContainer {   
     display: flex;
@@ -445,61 +391,6 @@
   background-color: whitesmoke;
   padding: 1em;
   
-
-  .aboutHeader {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 20%;
-
-    background-image: linear-gradient(to left, rgba(v.$dominant-color, 0.3), rgba(v.$accent-color, 0.3)), url("/src/img/open-book.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-
-    -webkit-mask-image: linear-gradient(
-      rgba(0, 0, 0,  1) 40%, 
-      rgba(0, 0, 0, 0.5) 70%, 
-      rgba(0, 0, 0,  0)
-    );
-    mask-image: linear-gradient(
-      rgba(0, 0, 0, 1) 40%, 
-      rgba(0, 0, 0, 0.5) 70%, 
-      rgba(0, 0, 0, 0)
-    );
-
-    @include breakpoints.desktop() {
-      align-items: center;
-      width: 100%;
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center;
-
-      -webkit-mask-image: linear-gradient(
-      rgba(0, 0, 0,  1) 60%, 
-      rgba(0, 0, 0, 0.5) 70%, 
-      rgba(0, 0, 0,  0)
-    );
-    mask-image: linear-gradient(
-      rgba(0, 0, 0, 1) 60%, 
-      rgba(0, 0, 0, 0.5) 80%, 
-      rgba(0, 0, 0, 0)
-    );
-
-    }
- 
-    .title {
-      color: whitesmoke;
-      text-align: center;
-      font-family: v.$heading-font-family;
-      font-size: calc(v.$heading-font-size*1.5);
-  
-      @include breakpoints.desktop() {
-        font-size: calc(v.$heading-font-size*2);
-      }
-    }
-  }
-
   .featuredContainer {
     display: flex;
     justify-content: space-between;
@@ -639,40 +530,30 @@
 
 #contactMe  {
   @include mixins.verticalCenterFlex;
+  gap: 2em;
   border: solid blue;
   height: 100vh;
+  background-color: whitesmoke;
+  padding: 1em;
+
+  .contactForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+    border: solid black;
+    height: 70%;
+    width: 80%;
+    padding: 2em;
+
+  }
 }
 
 #pageBottom {
   @include mixins.centeredFlexRow;
   border: solid blue;
   width: 100%;
-  height: 70px;
+  height: 8cm;
 }
 
 
-#modalSection {
-  max-width: 80%;
-  margin: auto;
-  border: none;
-  padding: 0.5em;
-
-  .modalContent {
-    display: flex;
-    flex-direction: column-reverse;
-    align-items: center;
-    gap: 0.5em;
-
-    .modalImg {
-      border: 2px solid lightgrey;
-      border-radius: 0.5em;
-      width: 100%;
-      
-    }
-  }
-}
-
-
-#modalSection::backdrop {
-  background: rgba(v.$navigationColor, 0.6);
-}

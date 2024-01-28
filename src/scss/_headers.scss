@@ -1,0 +1,58 @@
+@use "breakpoints";
+@use "variables" as v;
+
+.aboutHeader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 20%;
+
+  background-image: linear-gradient(to left, rgba(v.$dominant-color, 0.3), rgba(v.$accent-color, 0.3)), url("/src/img/open-book.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  -webkit-mask-image: linear-gradient(
+    rgba(0, 0, 0,  1) 40%, 
+    rgba(0, 0, 0, 0.5) 70%, 
+    rgba(0, 0, 0,  0)
+  );
+  mask-image: linear-gradient(
+    rgba(0, 0, 0, 1) 40%, 
+    rgba(0, 0, 0, 0.5) 70%, 
+    rgba(0, 0, 0, 0)
+  );
+
+  @include breakpoints.desktop() {
+    align-items: center;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    -webkit-mask-image: linear-gradient(
+    rgba(0, 0, 0,  1) 60%, 
+    rgba(0, 0, 0, 0.5) 70%, 
+    rgba(0, 0, 0,  0)
+  );
+  mask-image: linear-gradient(
+    rgba(0, 0, 0, 1) 60%, 
+    rgba(0, 0, 0, 0.5) 80%, 
+    rgba(0, 0, 0, 0)
+  );
+
+  }
+
+  .title {
+    color: whitesmoke;
+    text-align: center;
+    font-family: v.$heading-font-family;
+    font-size: calc(v.$heading-font-size*1.5);
+
+    @include breakpoints.desktop() {
+      font-size: calc(v.$heading-font-size*2);
+    }
+  }
+}
+
+
