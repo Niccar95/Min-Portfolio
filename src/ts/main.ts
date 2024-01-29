@@ -91,4 +91,31 @@ modalImg.className = "modalImg";
 
 
 
+  const handleOnMouseMove = (e: MouseEvent) => {
 
+    const projectContainer = e.currentTarget as HTMLElement;
+    const rect = projectContainer.getBoundingClientRect();
+    
+    const mouseX = e.clientX - rect.left;
+    const mouseY = e.clientY - rect.top;
+
+      projectContainer.style.setProperty("--mouse-x", `${mouseX}px`);
+      projectContainer.style.setProperty("--mouse-y", `${mouseY}px`);
+  }
+
+  const projectContainers = document.querySelectorAll('.projectContainer') as NodeListOf<HTMLElement>;
+
+  projectContainers.forEach((projectContainer)=> {
+    
+    projectContainer.addEventListener("mousemove", handleOnMouseMove);
+
+    projectContainer.addEventListener('mouseleave', () => {
+      
+      projectContainer.style.removeProperty('--mouse-x');
+      projectContainer.style.removeProperty('--mouse-y');
+    });
+  }); 
+   
+  
+    
+  

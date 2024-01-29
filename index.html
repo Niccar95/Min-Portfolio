@@ -150,7 +150,7 @@
 
         <dialog id="modalSection">
           <section class="modalContent">
-            <button class="modalCloseButton">Close</button>
+            <button class="modalCloseButton">Stäng</button>
           </section> 
         </dialog>
         
@@ -212,15 +212,26 @@
            <h2 class="title">Kontakta Mig</h2>
         </header>
        
-
         <form class="contactForm">
-          <input type="text">
-          <input type="email">
-          <label for="textBox">Meddelande: </label>
-          <textarea id="textBox" rows="10" cols="30">
+          <h3 class="formTitle">Hör av dig till mig</h2>
+          <input 
+          class="inputBar" 
+          type="text" 
+          placeholder="Skriv ditt namn"
+          autofocus 
+          required>
 
-          </textarea>
-          <button>Skicka</button>
+          <input 
+          class="inputBar" 
+          type="email" 
+          placeholder="Skriv ditt mejladress"
+          required>
+
+          <textarea 
+          class="messageBox" placeholder="Skriv ett meddelande" rows="10" cols="30"
+          required></textarea>
+
+          <button class="submitButton" type="submit">Skicka</button>
         </form>
 
       </section>

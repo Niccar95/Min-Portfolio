@@ -6,7 +6,6 @@
   margin: auto;
   border: none;
   padding: 0.5em;
-
   
   @include breakpoints.desktop() {
     max-width: 60%; 
