@@ -211,29 +211,52 @@
         <header class="aboutHeader">
            <h2 class="title">Kontakta Mig</h2>
         </header>
-       
-        <form class="contactForm">
-          <h3 class="formTitle">Hör av dig till mig</h2>
-          <input 
-          class="inputBar" 
-          type="text" 
-          placeholder="Skriv ditt namn"
-          autofocus 
-          required>
 
-          <input 
-          class="inputBar" 
-          type="email" 
-          placeholder="Skriv ditt mejladress"
-          required>
+          <form class="contactForm">
 
-          <textarea 
-          class="messageBox" placeholder="Skriv ett meddelande" rows="10" cols="30"
-          required></textarea>
+            <h3 class="formTitle">Hör av dig till mig</h3>
 
-          <button class="submitButton" type="submit">Skicka</button>
-        </form>
+            <section class="inputSection">
 
+              <label class="inputLabels"
+              for="nameInput">Namn: </label>
+
+              <input
+            id="nameInput"
+            class="inputBar" 
+            type="text" 
+            autofocus 
+            required>
+
+            <label class="inputLabels"
+            for="emailInput">Mejladress: </label>
+  
+            <input 
+            id="emailInput"
+            class="inputBar" 
+            type="email" 
+            required>
+
+            </section>
+
+
+            <section class="messageSection">
+
+              <label class="inputLabels"
+              for="messageBox">Meddelande: </label>
+
+              <textarea 
+              id="messageBox"
+              class="messageBox" 
+              rows="7" 
+              maxlength="120"
+              required></textarea>
+
+            </section>
+  
+            <button class="submitButton" type="submit">Skicka</button>
+            
+          </form>
       </section>
 
       <footer id="pageBottom">
