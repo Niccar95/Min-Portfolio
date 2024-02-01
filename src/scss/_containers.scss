@@ -532,7 +532,7 @@
 
 #contactMe  {
   @include mixins.verticalCenterFlex;
-  gap: 2em;
+  gap: 1em;
   height: 100vh;
   background-color: whitesmoke;
   padding: 1em;
@@ -542,41 +542,77 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    height: 70%;
-    width: 80%;
-    padding: 1.5em;
+    height: 75%;
+    width: 85%;
+    padding: 1em;
     border-radius: 0.5em;
     box-shadow: 0px 0px 2px 2px rgba(0, 0, 0 , 0.2);
 
+    @include breakpoints.desktop() {
+      width: 50%;
+    }
+
     .formTitle {
       font-family: v.$heading-font-family;
+      font-size: 1.5em;
+
+      @include breakpoints.desktop() {
+        font-size: 2em;
+      }
     }
 
     .inputSection {
+      width: 100%;
+
+      @include breakpoints.desktop() {
+        width: 70%;
+      }
       
       .inputBar {
-        padding: 0.5em;
+        padding: 1em;
         box-shadow: inset 0px 1px 1px 1px rgba(0, 0, 0 , 0.4);
         border: none;
-        border-radius: 0.2em;
+        border-radius: 2em;
         width: 100%;
+        
+        @include breakpoints.desktop() {
+        padding: 1.2em;
       }
     }
-
+  }
+    
     .messageSection {
+      width: 100%;
+      
+      @include breakpoints.desktop() {
+        width: 70%;  
+      }
 
     .messageBox {
       resize: none;
-      padding: 0.5em;
+      padding: 1em;
       box-shadow: inset 0px 1px 1px 1px rgba(0, 0, 0 , 0.4);
       border: none;
-      border-radius: 0.2em; 
+      border-radius: 1em; 
       width: 100%;
+
+      @include breakpoints.desktop() {
+        padding: 1.2em;
+        width: 100%;
       }
     }
+  }
 
     .inputLabels {
-      font-size: 0.8em;
+      font-family: v.$heading-font-family;
+      display: block;
+      margin: 10px 0 2px 8px;
+      font-size: 1em;
+
+      @include breakpoints.desktop() {
+        margin: 12px 0 5px 8px;
+        font-size: 1.2em;
+      }
     }
 
     .inputBar:focus, 
@@ -584,7 +620,17 @@
       outline: solid 1px v.$accent-color;
       border-color: v.$accent-color;
       box-shadow: 0 0 7px rgba(v.$accent-color, 0.6);
-    }   
+    } 
+    
+    .inputBar::placeholder, 
+    .messageBox::placeholder {
+      font-size: 0.8em;
+      font-family: v.$base-font-family;
+
+      @include breakpoints.desktop() {
+        font-size: 1em;
+      }
+    }  
   }  
 }
 

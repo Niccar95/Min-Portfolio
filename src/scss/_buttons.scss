@@ -1,6 +1,11 @@
 @use "variables" as v;
 @use "breakpoints";
 
+
+button {
+  font-family: v.$base-font-family;
+}
+
 .resumeButton {
   padding: 10px 30px;
   border-radius: 2em;
@@ -154,13 +159,17 @@ input:checked + .slider:before {
 
 
 .submitButton {
-  padding: 6px 30px;
+  padding: 6px 20px;
   border-radius: 2em;
   font-size: 0.8em;
   border: 5px double v.$accent-color;
   box-shadow: 0 0 8px v.$accent-color;
   cursor: pointer;
   transition: all 0.3s; 
+
+  @include breakpoints.desktop() {
+    font-size: 1em;
+  }
 }
 
 .submitButton:hover {
