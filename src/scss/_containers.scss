@@ -592,6 +592,12 @@
   @include mixins.centeredFlexRow;
   width: 100%;
   height: 8em;
+  background-image:  linear-gradient(to left, rgba(v.$dominant-color, 0.3), rgba(v.$accent-color, 0.3)), url("/src/img/cup-of-coffee.jpg");
+  background-size: cover;
+
+  .copyright {
+    color: v.$secondary-color;
+  }
 }
 
 
