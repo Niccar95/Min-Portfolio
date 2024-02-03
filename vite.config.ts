@@ -2,6 +2,7 @@
 import checker from 'vite-plugin-checker'
 import SassPlugin from 'vite-plugin-sass';
 export default {
+  base: "/",
   plugins: [
     checker({
       // e.g. use TypeScript check
