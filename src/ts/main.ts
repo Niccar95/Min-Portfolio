@@ -75,12 +75,12 @@ modalImg.className = "modalImg";
 
   openModalSection1.addEventListener("click", () => {
     modalSection.showModal();
-    modalImg.src = "/Min-Portfolio/src/img/pokeSearch.png";
+     modalImg.setAttribute("src", "/Min-Portfolio/src/img/pokeSearch.png");
   });
 
   openModalSection2.addEventListener("click", () => {
     modalSection.showModal();
-    modalImg.src = "/Min-Portfolio/src/img/pokeSearch.png";
+    modalImg.setAttribute("src", "/Min-Portfolio/src/img/todoList.png");
   });
 
   
