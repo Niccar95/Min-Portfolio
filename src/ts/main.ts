@@ -75,7 +75,7 @@ modalImg.className = "modalImg";
 
   openModalSection1.addEventListener("click", () => {
     modalSection.showModal();
-     modalImg.setAttribute("src", "/Min-Portfolio/src/img/modalPokemon.png");
+     modalImg.setAttribute("src", "/Min-Portfolio/assets/pokeSearch-985467a5.png");
   });
 
   openModalSection2.addEventListener("click", () => {
