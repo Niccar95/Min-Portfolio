@@ -80,7 +80,7 @@ modalImg.className = "modalImg";
 
   openModalSection2.addEventListener("click", () => {
     modalSection.showModal();
-    modalImg.setAttribute("src", "/Min-Portfolio/src/img/modalTodo.png");
+    modalImg.setAttribute("src", "/Min-Portfolio/assets/todoList-c7a90288.png");
   });
 
   
