@@ -62,25 +62,32 @@ else {
 lastScrollY = window.scrollY;  
 });
 
-
 const modalSection = document.getElementById("modalSection") as HTMLDialogElement;
+const modalSection1 = document.querySelector(".modalSection1") as HTMLDialogElement;
+const modalSection2 = document.querySelector(".modalSection2") as HTMLDialogElement;
+
 const openModalSection1 = document.querySelector(".openModalSection1") as HTMLElement;
 const openModalSection2 = document.querySelector(".openModalSection2") as HTMLElement;
 const closeModalSection = document.querySelector(".modalCloseButton") as HTMLElement;
+
+
+/*
 const modalContent = document.querySelector(".modalContent") as HTMLElement;
 const modalImg = document.createElement("img");
 modalContent.appendChild(modalImg);
 
 modalImg.className = "modalImg";
 
+*/
+
   openModalSection1.addEventListener("click", () => {
-    modalSection.showModal();
-     modalImg.setAttribute("src", "/Min-Portfolio/assets/pokeSearch-985467a5.png");
+    modalSection1.showModal();
+     //modalImg.setAttribute("src", "/Min-Portfolio/assets/pokeSearch-985467a5.png");
   });
 
   openModalSection2.addEventListener("click", () => {
-    modalSection.showModal();
-    modalImg.setAttribute("src", "/Min-Portfolio/assets/todoList-c7a90288.png");
+    modalSection2.showModal();
+    //modalImg.setAttribute("src", "/Min-Portfolio/assets/todoList-c7a90288.png");
   });
 
   
