@@ -71,8 +71,8 @@ const modalContent = document.querySelector(".modalContent") as HTMLElement;
 const modalImg = document.createElement("img");
 modalContent.appendChild(modalImg);
 
-const pokeSearchImageSrc = "../img/pokeSearch.png";
-const todoListImageSrc = "../img/todoList.png";
+const pokeSearchImageSrc = "/src/img/pokeSearch.png";
+const todoListImageSrc = "/src/img/todoList.png";
 
 modalImg.className = "modalImg";
 
