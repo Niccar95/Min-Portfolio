@@ -71,16 +71,19 @@ const modalContent = document.querySelector(".modalContent") as HTMLElement;
 const modalImg = document.createElement("img");
 modalContent.appendChild(modalImg);
 
+const pokeSearchImageSrc = "./src/img/pokeSearch.png";
+const todoListImageSrc = "./src/img/todoList.png";
+
 modalImg.className = "modalImg";
 
   openModalSection1.addEventListener("click", () => {
     modalSection.showModal();
-     modalImg.setAttribute("src", "/Min-Portfolio/src/img/pokeSearch.png");
+     modalImg.src = pokeSearchImageSrc;
   });
 
   openModalSection2.addEventListener("click", () => {
     modalSection.showModal();
-    modalImg.setAttribute("src", "/Min-Portfolio/src/img/todoList.png");
+    modalImg.src = todoListImageSrc;
   });
 
   
