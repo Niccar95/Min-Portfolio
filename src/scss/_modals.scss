@@ -14,7 +14,7 @@
   
   .modalContent {
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
     align-items: center;
     gap: 0.5em;
 
@@ -30,6 +30,7 @@
   }
 }
 
-#modalSection::backdrop {
+#modalSection1::backdrop,
+#modalSection2::backdrop {
   background: rgba(v.$navigationColor, 0.6);
 }
