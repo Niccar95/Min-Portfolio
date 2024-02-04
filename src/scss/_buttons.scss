@@ -133,7 +133,8 @@ input:checked + .slider:before {
   background-color: rgba(v.$accent-color, 0.2);
 }
 
-.modalCloseButton {
+.modalCloseButton1, 
+.modalCloseButton2 {
   padding: 6px 30px;
   border-radius: 2em;
   font-size: 0.8em;
@@ -147,12 +148,14 @@ input:checked + .slider:before {
   }
 }
 
-.modalCloseButton:hover {
+.modalCloseButton1:hover,
+.modalCloseButton2:hover {
   color: v.$accent-color;
   box-shadow: 0 0 20px v.$accent-color;
 }
 
-.modalCloseButton:active {
+.modalCloseButton1:active,
+.modalCloseButton2:active {
   border: 5px solid;
   background-color: rgba(v.$accent-color, 0.2);
 }

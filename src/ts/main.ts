@@ -62,13 +62,13 @@ else {
 lastScrollY = window.scrollY;  
 });
 
-const modalSection = document.querySelector(".modalSection") as HTMLDialogElement;
 const modalSection1 = document.querySelector(".modalSection1") as HTMLDialogElement;
 const modalSection2 = document.querySelector(".modalSection2") as HTMLDialogElement;
 
 const openModalSection1 = document.querySelector(".openModalSection1") as HTMLElement;
 const openModalSection2 = document.querySelector(".openModalSection2") as HTMLElement;
-const closeModalSection = document.querySelector(".modalCloseButton") as HTMLElement;
+const closeModalSection1 = document.querySelector(".modalCloseButton1") as HTMLElement;
+const closeModalSection2 = document.querySelector(".modalCloseButton2") as HTMLElement;
 
 
   openModalSection1.addEventListener("click", () => {
@@ -80,10 +80,14 @@ const closeModalSection = document.querySelector(".modalCloseButton") as HTMLEle
   });
 
   
-
-  closeModalSection.addEventListener("click", () => {
-    modalSection.close();
+  closeModalSection1.addEventListener("click", () => {
+    modalSection1.close();
   });
+
+  closeModalSection2.addEventListener("click", () => {
+    modalSection2.close();
+  });
+
 
 
 
