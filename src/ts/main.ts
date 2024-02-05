@@ -115,6 +115,10 @@ const closeModalSection2 = document.querySelector(".modalCloseButton2") as HTMLE
       projectContainer.style.removeProperty('--mouse-y');
     });
   }); 
+
+
+
+  
    
   
     
