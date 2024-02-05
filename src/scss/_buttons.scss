@@ -187,14 +187,29 @@ input:checked + .slider:before {
 
 
 
-.rightArrow {
+.rightArrowContainer {
   position: absolute;
-  top: 20px;
+  top: 30px;
   right: 0; 
+  @include breakpoints.desktop() {
+    top: 150px;
+  }
 }
 
-.leftArrow {
+.leftArrowContainer {
   position: absolute;
-  top: 20px;
+  top: 30px;
   left: 0; 
+  @include breakpoints.desktop() {
+    top: 150px;
+  } 
 }
+
+.leftArrow, 
+.rightArrow {
+    width: 40px;
+    cursor: pointer;
+    @include breakpoints.desktop() {
+      width: 60px;
+    } 
+  }
