@@ -194,16 +194,39 @@ input:checked + .slider:before {
 .ArrowContainer {
   display: flex; 
   justify-content: center;
+  padding: 0.7em;
   gap: 2em;
-  border: solid black;
+
+  
+  @include breakpoints.desktop() {
+    gap: 4em;
+  } 
+
 }
 
-.leftArrow, 
-.rightArrow {
+.leftArrowButton, 
+.rightArrowButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     width: 40px;
+    height: 40px;
+    border-radius: 50%;
     cursor: pointer;
 
     @include breakpoints.desktop() {
       width: 60px;
+      height: 60px;
     } 
+
+    .leftArrowIcon, 
+    .rightArrowIcon {
+      width: 30px;
+
+      @include breakpoints.desktop() {
+        width: 50px;
+      } 
+  
+    }
   }
