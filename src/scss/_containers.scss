@@ -217,6 +217,7 @@
 
     @include breakpoints.desktop() {
       gap: 1.5em;
+      height: 40%;
     }
 
     .desktopLinkSection {
@@ -276,7 +277,7 @@
     flex-direction: column;
     justify-content: center;
     gap: 0.5em;
-    height: 100%;
+    height: 40%;
 
      .myImage {
        width: 8em;
@@ -378,59 +379,78 @@
   }
 
   .skillSection {
-    position: relative;
+    overflow-x: hidden;
+    overflow-y: hidden;
     @include mixins.verticalCenterFlex;
     justify-content: center;
     width: 100%;
-    height: 40%;
-    gap: 1.5em;
+    height: 35%;
+    gap: 0.5em;
 
     @include breakpoints.desktop() {
-      border-bottom: none;
+      height: 30%;
     }
 
     .skillsTitle {
       font-family: v.$heading-font-family;
       font-size: 1.8em;
     }
-    
-    .skillList {
-      display: flex; 
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: center;
-      gap: 1.5em;
-      list-style: none;
-      width: 100%;
 
-    @include breakpoints.desktop() {
-      gap: 4em;
+
+    .skillPageContainer {
+      width: 200%;
+      margin-right: 100%;
+      display: flex;
+      border: solid black;
+
+        .skillList {
+          display: flex; 
+          flex-wrap: wrap;
+          align-items: center;
+          justify-content: center;
+          gap: 1.5em;
+          list-style: none;
+          width: 100%;
+      
+        @include breakpoints.desktop() {
+          gap: 4em;
+        }
+        
+        .skillIcon {
+        height: 70px;
+        width: 70px;
+      
+        @include breakpoints.desktop(){
+          height: 80px;
+          width: 80px;
+        }
+      }
     }
   }
 
-  .skillIcon {
-    height: 70px;
-    width: 70px;
-
-    @include breakpoints.desktop(){
-      height: 80px;
-      width: 80px;
-    }
+    .skillPageContainer.moveAside {
+        margin-left: 200%;
+        transition: 0.5s ease-in-out; 
+      }
+  
+      .skillPageContainer.moveBack {
+        transition: 0.5s ease-in-out; 
+      }
   }
-}
 }
 
 #myProjects {
   scroll-snap-align: start;
   scroll-snap-stop: always;
   @include mixins.verticalCenterFlex;
-  justify-content: space-between;
+  gap: 1em;
   height: 100vh; 
   background-color: whitesmoke;
   padding: 1em;
 
   @include breakpoints.desktop() {
     scroll-snap-stop: normal;
+    gap: 1.5em;
   }
   
   .featuredContainer {
@@ -457,14 +477,15 @@
   .projectsGallery {
     width: 100%;
     height: 70%;
-    display: grid;
-    gap: 0.5em;
-    grid-template-columns: auto;
-    grid-template-rows: 50% 50%;
-
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    align-items: center;
+  
     @include breakpoints.desktop() {
       @include mixins.centeredFlexRow;
       gap: 1.5em;
+      height: 60%;
       width: 90%;
     }
 
@@ -472,6 +493,7 @@
       position: relative;
       display: flex;
       width: 100%;
+      height: 50%;
       border-radius: 0.5em;
       box-shadow: 0px 0px 2px 2px rgba(0, 0, 0 , 0.2);
       overflow: hidden;

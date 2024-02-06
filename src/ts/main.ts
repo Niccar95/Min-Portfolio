@@ -118,6 +118,23 @@ const closeModalSection2 = document.querySelector(".modalCloseButton2") as HTMLE
 
 
 
+  const skillPageContainer = document.querySelector(".skillPageContainer") as HTMLElement;
+  const rightArrow = document.querySelector(".rightArrow") as HTMLElement;
+  const leftArrow = document.querySelector(".leftArrow") as HTMLElement;
+
+  rightArrow.addEventListener("click", ()=> {
+
+    skillPageContainer.classList.toggle("moveAside");
+    skillPageContainer.classList.remove("moveBack");
+
+  });
+
+  leftArrow.addEventListener("click", ()=> {
+    skillPageContainer.classList.remove("moveAside");
+    skillPageContainer.classList.toggle("moveBack");
+  });
+
+
   
    
   

@@ -191,29 +191,18 @@ input:checked + .slider:before {
 }
 
 
-
-.rightArrowContainer {
-  position: absolute;
-  top: 30px;
-  right: 0; 
-  @include breakpoints.desktop() {
-    top: 150px;
-  }
-}
-
-.leftArrowContainer {
-  position: absolute;
-  top: 30px;
-  left: 0; 
-  @include breakpoints.desktop() {
-    top: 150px;
-  } 
+.ArrowContainer {
+  display: flex; 
+  justify-content: center;
+  gap: 2em;
+  border: solid black;
 }
 
 .leftArrow, 
 .rightArrow {
     width: 40px;
     cursor: pointer;
+
     @include breakpoints.desktop() {
       width: 60px;
     } 
