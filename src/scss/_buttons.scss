@@ -194,12 +194,12 @@ input:checked + .slider:before {
 .ArrowContainer {
   display: flex; 
   justify-content: center;
-  padding: 0.7em;
   gap: 2em;
 
   
   @include breakpoints.desktop() {
     gap: 4em;
+    padding: 0.5em;
   } 
 
 }
