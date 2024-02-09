@@ -118,6 +118,7 @@ input:checked + .slider:before {
   padding: 10px 30px;
   border-radius: 2em;
   font-size: 0.8em;
+  background-color: transparent;
   border: 5px double v.$accent-color;
   box-shadow: 0 0 8px v.$accent-color;
   cursor: pointer;

@@ -56,7 +56,7 @@
       margin: 5px auto;
       -webkit-transition: all 0.3s ease-in-out;
       transition: all 0.3s ease-in-out;
-      background-color: white;
+      background-color: whitesmoke;
     
     }
 
@@ -104,19 +104,20 @@
         border: none;
         }
 
-        a {
+        .navLink {
           text-decoration: none;
           transition: ease-in-out 0.2s;
+          color: whitesmoke;
         }
       }
 
-      a:hover {
+      .navLink:hover {
         font-size: 1.5em;
         font-weight: 500;
 
       }
 
-      a:visited {
+      .navLink:visited {
         color: whitesmoke;
       }
       
@@ -389,8 +390,8 @@
     gap: 0.5em;
     box-shadow: inset 0px 0px 2px 2px rgba(0, 0, 0 , 0.2);
     border-radius: 1em;
-    border-right: double 10px black;
-    border-left: double 10px black;
+    border-right: double 10px lightgrey;
+    border-left: double 10px lightgrey;
   
     @include breakpoints.desktop() {
       width: 60%;
