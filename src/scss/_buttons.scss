@@ -1,7 +1,6 @@
 @use "variables" as v;
 @use "breakpoints";
 
-
 button {
   font-family: v.$base-font-family;
 }
@@ -16,7 +15,7 @@ button {
   color: v.$secondary-color;
   background-color: transparent;
   cursor: pointer;
-  animation: onLoadScale 2s;
+  animation: onLoadScale 1s;
 
   @include breakpoints.desktop() {
     font-size: 1em;
@@ -24,19 +23,15 @@ button {
   }
 }
 
-
 .resumeButton:hover {
   border-color: v.$accent-color;
   color: v.$accent-color;
   box-shadow: 0 0 20px v.$accent-color;
-
 }
 
 .resumeButton:active {
   background-color: rgba(45, 45, 45, 0.3);
-
 }
-
 
 @keyframes onLoadScale {
   0% {
@@ -46,7 +41,6 @@ button {
     transform: scale(1);
   }
 }
-
 
 /*
 
@@ -106,7 +100,7 @@ input:checked + .slider:before {
   border: 5px double v.$accent-color;
   box-shadow: 0 0 8px v.$accent-color;
   cursor: pointer;
-  transition: all 0.3s; 
+  transition: all 0.3s;
 
   @include breakpoints.desktop() {
     font-size: 1em;
@@ -117,14 +111,12 @@ input:checked + .slider:before {
   border-color: v.$accent-color;
   color: v.$accent-color;
   box-shadow: 0 0 20px v.$accent-color;
-
 }
 
 .viewAllButton:active {
   border: 5px solid;
   background-color: rgba(v.$accent-color, 0.2);
 }
-
 
 .seeProjectButton {
   padding: 10px 30px;
@@ -134,7 +126,7 @@ input:checked + .slider:before {
   border: 5px double v.$accent-color;
   box-shadow: 0 0 8px v.$accent-color;
   cursor: pointer;
-  transition: all 0.3s; 
+  transition: all 0.3s;
 
   @include breakpoints.desktop() {
     font-size: 1em;
@@ -151,7 +143,7 @@ input:checked + .slider:before {
   background-color: rgba(v.$accent-color, 0.2);
 }
 
-.modalCloseButton1, 
+.modalCloseButton1,
 .modalCloseButton2 {
   padding: 6px 30px;
   border-radius: 2em;
@@ -159,7 +151,7 @@ input:checked + .slider:before {
   border: 5px double v.$accent-color;
   box-shadow: 0 0 8px v.$accent-color;
   cursor: pointer;
-  transition: all 0.3s; 
+  transition: all 0.3s;
 
   @include breakpoints.desktop() {
     font-size: 1em;
@@ -178,7 +170,6 @@ input:checked + .slider:before {
   background-color: rgba(v.$accent-color, 0.2);
 }
 
-
 .submitButton {
   padding: 6px 20px;
   border-radius: 2em;
@@ -186,7 +177,7 @@ input:checked + .slider:before {
   border: 5px double v.$accent-color;
   box-shadow: 0 0 8px v.$accent-color;
   cursor: pointer;
-  transition: all 0.3s; 
+  transition: all 0.3s;
 
   @include breakpoints.desktop() {
     font-size: 1em;
@@ -203,44 +194,38 @@ input:checked + .slider:before {
   background-color: rgba(v.$accent-color, 0.2);
 }
 
-
 .ArrowContainer {
-  display: flex; 
+  display: flex;
   justify-content: center;
   gap: 2em;
 
-  
   @include breakpoints.desktop() {
     gap: 4em;
     padding: 0.5em;
-  } 
-
+  }
 }
 
-.leftArrowButton, 
+.leftArrowButton,
 .rightArrowButton {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    cursor: pointer;
-  
-    @include breakpoints.desktop() {
-      width: 60px;
-      height: 60px;
-    } 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
 
-    .leftArrowIcon, 
-    .rightArrowIcon {
-      width: 30px;
-
-      @include breakpoints.desktop() {
-        width: 50px;
-      } 
-    }
+  @include breakpoints.desktop() {
+    width: 60px;
+    height: 60px;
   }
 
+  .leftArrowIcon,
+  .rightArrowIcon {
+    width: 30px;
 
-  
+    @include breakpoints.desktop() {
+      width: 50px;
+    }
+  }
+}
