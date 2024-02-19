@@ -146,14 +146,3 @@ leftArrowButton.addEventListener("click", () => {
   leftArrowButton.disabled = true;
   rightArrowButton.disabled = false;
 });
-
-function redirectToOtherPage() {
-  // Redirect to the desired URL
-  window.location.href = "/otherPages/file.html";
-}
-
-// Call the function when the button is clicked or any other trigger event
-document.addEventListener("DOMContentLoaded", function () {
-  const viewAllButton = document.querySelector(".viewAllButton");
-  viewAllButton?.addEventListener("click", redirectToOtherPage);
-});
