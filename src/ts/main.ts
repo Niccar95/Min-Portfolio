@@ -149,7 +149,7 @@ leftArrowButton.addEventListener("click", () => {
 
 function redirectToOtherPage() {
   // Redirect to the desired URL
-  window.location.href = "/file.html";
+  window.location.href = "/otherPages/file.html";
 }
 
 // Call the function when the button is clicked or any other trigger event
