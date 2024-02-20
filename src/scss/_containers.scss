@@ -11,9 +11,14 @@
   justify-content: flex-start;
   gap: 1em;
   height: 100vh;
-  
-  background-image:  linear-gradient(to left, rgba(v.$dominant-color, 0.3), rgba(v.$accent-color, 0.3)), url("../img/cup-of-coffee.jpg");
- 
+
+  background-image: linear-gradient(
+      to left,
+      rgba(v.$dominant-color, 0.3),
+      rgba(v.$accent-color, 0.3)
+    ),
+    url("../img/cup-of-coffee.jpg");
+
   background-repeat: no-repeat;
   background-size: cover;
 
@@ -41,14 +46,14 @@
       display: block;
       cursor: pointer;
       z-index: 102;
-    
+
       @include breakpoints.desktop() {
         display: none;
         font-size: 1.2em;
-        padding: 12px 15px;  
-      }   
+        padding: 12px 15px;
+      }
     }
-    
+
     .bar {
       display: block;
       width: 25px;
@@ -57,21 +62,19 @@
       -webkit-transition: all 0.3s ease-in-out;
       transition: all 0.3s ease-in-out;
       background-color: whitesmoke;
-    
     }
 
     .hamburger.active .bar:nth-child(2) {
       opacity: 0;
     }
-  
+
     .hamburger.active .bar:nth-child(1) {
       transform: translateY(8px) rotate(45deg);
     }
-  
+
     .hamburger.active .bar:nth-child(3) {
       transform: translateY(-8px) rotate(-45deg);
     }
-    
 
     .navigationList {
       position: fixed;
@@ -82,7 +85,7 @@
       transition: 0.5s;
       right: -100%;
       top: 100px;
-      width: 100%; 
+      width: 100%;
       height: 170px;
 
       @include breakpoints.desktop() {
@@ -100,8 +103,8 @@
         width: 100%;
 
         @include breakpoints.desktop() {
-        width: initial;
-        border: none;
+          width: initial;
+          border: none;
         }
 
         .navLink {
@@ -114,13 +117,11 @@
       .navLink:hover {
         font-size: 1.5em;
         font-weight: 500;
-
       }
 
       .navLink:visited {
         color: whitesmoke;
       }
-      
     }
 
     .navigationList.active {
@@ -128,7 +129,6 @@
       z-index: 101;
       background-color: rgba(45, 45, 45, 0.9);
     }
-
 
     /*
     
@@ -161,7 +161,7 @@
 }
 
 */
-}
+  }
 
   #hero {
     display: flex;
@@ -177,14 +177,14 @@
 
     .portfolioPresentation {
       color: whitesmoke;
-      font-family: 'Caveat', cursive;
+      font-family: "Caveat", cursive;
       font-size: 4em;
 
       @include breakpoints.desktop() {
         font-size: 6em;
       }
-    } 
-  } 
+    }
+  }
 
   .navScrolled {
     background-color: rgba(45, 45, 45, 0.9);
@@ -202,7 +202,7 @@
   flex-direction: column;
   align-items: center;
   gap: 0.4em;
-  height: 100vh; 
+  height: 100vh;
   background-color: whitesmoke;
   padding: 1em;
 
@@ -211,10 +211,10 @@
     justify-content: space-between;
   }
 
-  .descriptionContainer {   
+  .descriptionContainer {
     display: flex;
     align-items: center;
-    justify-content: center; 
+    justify-content: center;
     gap: 0.5em;
     width: 100%;
     height: 40%;
@@ -225,7 +225,6 @@
 
     .desktopLinkSection {
       display: none;
-      
 
       @include breakpoints.desktop() {
         display: block;
@@ -250,45 +249,44 @@
         list-style: none;
         gap: 1em;
 
-      .socialIconContainer {
-        display: flex; 
-        width: 30px;
-        height: 30px;
-        align-items: center;
-        justify-content: center;
-      
+        .socialIconContainer {
+          display: flex;
+          width: 30px;
+          height: 30px;
+          align-items: center;
+          justify-content: center;
 
-      .socialIcon {
-        width: 25px;
-        height: 25px;
+          .socialIcon {
+            width: 25px;
+            height: 25px;
+          }
+        }
       }
     }
-  }
-}
-   .imageSection {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 0.5em;
-    height: 40%;
+    .imageSection {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 0.5em;
+      height: 40%;
 
-     .myImage {
-       width: 8em;
-       border-radius: 40% 60% 60% 40% / 70% 30% 70% 30%;
-       animation: morph 8s linear infinite alternate;
-  
-       @include breakpoints.desktop() {
-         width: 12em;
-       }
-     }
-  
-     @keyframes morph {
-       0% {
-         border-radius: 40% 60% 60% 40% / 70% 30% 70% 30%;
-       }
-       100% {
-         border-radius: 40% 60%;
-       }
+      .myImage {
+        width: 8em;
+        border-radius: 40% 60% 60% 40% / 70% 30% 70% 30%;
+        animation: morph 8s linear infinite alternate;
+
+        @include breakpoints.desktop() {
+          width: 12em;
+        }
+      }
+
+      @keyframes morph {
+        0% {
+          border-radius: 40% 60% 60% 40% / 70% 30% 70% 30%;
+        }
+        100% {
+          border-radius: 40% 60%;
+        }
       }
 
       .mobileLinkSection {
@@ -315,22 +313,22 @@
           list-style: none;
           width: 100%;
           height: 40px;
-        
+
           .socialIconContainer {
-            display: flex; 
+            display: flex;
             width: 30px;
             height: 30px;
             align-items: center;
             justify-content: center;
-          
+
             .socialIcon {
               width: 22px;
               height: 22px;
+            }
           }
         }
       }
     }
-  }
 
     .textContainer {
       width: 100%;
@@ -338,7 +336,7 @@
       @include breakpoints.desktop() {
         width: 40%;
       }
-      
+
       .presentation {
         font-family: v.$heading-font-family;
         font-size: 1.4em;
@@ -348,7 +346,7 @@
         @include breakpoints.desktop() {
           font-size: 2.5em;
         }
-      }   
+      }
 
       .description {
         font-size: 0.8em;
@@ -374,11 +372,11 @@
     width: 90%;
     height: 35%;
     gap: 0.5em;
-    box-shadow: inset 0px 0px 2px 2px rgba(0, 0, 0 , 0.2);
+    box-shadow: inset 0px 0px 2px 2px rgba(0, 0, 0, 0.2);
     border-radius: 1em;
     border-right: double 10px lightgrey;
     border-left: double 10px lightgrey;
-  
+
     @include breakpoints.desktop() {
       width: 60%;
       height: 30%;
@@ -397,48 +395,47 @@
       }
     }
 
-
     .skillPageContainer {
       width: 200%;
       margin-left: 100%;
       display: flex;
       align-items: center;
       justify-content: center;
-      
-        .skillList {
-          display: flex; 
-          flex-wrap: wrap;
-          align-items: center;
-          justify-content: center;
-          gap: 1.5em;
-          list-style: none;
-          width: 100%;
-          height: 100%;
- 
+
+      .skillList {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 1.5em;
+        list-style: none;
+        width: 100%;
+        height: 100%;
+
         @include breakpoints.desktop() {
           gap: 3em;
         }
-        
+
         .skillIcon {
-        height: 60px;
-        width: 60px;
-      
-        @include breakpoints.desktop(){
-          height: 80px;
-          width: 80px;
+          height: 60px;
+          width: 60px;
+
+          @include breakpoints.desktop() {
+            height: 80px;
+            width: 80px;
+          }
         }
       }
     }
-  }
 
     .skillPageContainer.moveAside {
-        margin-right: 200%;
-        transition: 0.3s ease-in-out; 
-      }
-  
-      .skillPageContainer.moveBack {
-        transition: 0.3s ease-in-out; 
-      }
+      margin-right: 200%;
+      transition: 0.3s ease-in-out;
+    }
+
+    .skillPageContainer.moveBack {
+      transition: 0.3s ease-in-out;
+    }
   }
 }
 
@@ -447,7 +444,7 @@
   scroll-snap-stop: always;
   @include mixins.verticalCenterFlex;
   gap: 1em;
-  height: 100vh; 
+  height: 100vh;
   background-color: whitesmoke;
   padding: 1em;
 
@@ -455,7 +452,7 @@
     scroll-snap-stop: normal;
     gap: 1.5em;
   }
-  
+
   .featuredContainer {
     display: flex;
     justify-content: space-between;
@@ -471,8 +468,8 @@
       font-size: 1.2em;
       display: inline-block;
 
-    @include breakpoints.desktop() {
-       font-size: 1.8em;
+      @include breakpoints.desktop() {
+        font-size: 1.8em;
       }
     }
   }
@@ -484,7 +481,7 @@
     flex-direction: column;
     gap: 1em;
     align-items: center;
-  
+
     @include breakpoints.desktop() {
       @include mixins.centeredFlexRow;
       gap: 1.5em;
@@ -498,10 +495,14 @@
       width: 100%;
       height: 50%;
       border-radius: 0.5em;
-      box-shadow: 0px 0px 2px 2px rgba(0, 0, 0 , 0.2);
+      box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.2);
       overflow: hidden;
 
-      background: radial-gradient(800px circle at var(--mouse-x) var(--mouse-y), rgba(grey, 0.2), transparent 40%);
+      background: radial-gradient(
+        800px circle at var(--mouse-x) var(--mouse-y),
+        rgba(grey, 0.2),
+        transparent 40%
+      );
 
       @include breakpoints.desktop() {
         height: 100%;
@@ -509,9 +510,9 @@
 
       .imgContainer {
         width: 50%;
-        height: 100%; 
+        height: 100%;
         transform: skewX(-10deg);
-        transform-origin: 100% 0; 
+        transform-origin: 100% 0;
         overflow: hidden;
         cursor: pointer;
 
@@ -522,14 +523,14 @@
         .projectImage {
           width: 100%;
           height: 100%;
-          object-fit: cover; 
+          object-fit: cover;
           object-position: center;
           transform: skewX(10deg);
-          transform-origin: 100% 0; 
+          transform-origin: 100% 0;
         }
       }
 
-      .imgContainer:hover { 
+      .imgContainer:hover {
         border-right: solid 5px v.$accent-color;
         box-shadow: 0 0 8px v.$accent-color;
         transition: 0.2s ease-in-out;
@@ -542,7 +543,7 @@
         box-shadow: 0 0 8px v.$accent-color;
         transition: 0.2s ease-in-out;
       }
-      
+
       .summaryContainer {
         display: flex;
         flex-direction: column;
@@ -556,7 +557,7 @@
           justify-content: center;
           gap: 2.5em;
         }
-       
+
         .projectTitle {
           font-family: v.$heading-font-family;
           font-size: 1.8em;
@@ -565,7 +566,7 @@
             font-size: 2.5em;
           }
         }
-  
+
         .projectSummary {
           font-size: 0.8em;
           text-align: center;
@@ -624,6 +625,46 @@
     scroll-snap-stop: normal;
   }
 
+  .contactInfoSection {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 0.7em;
+    padding: 1em;
+    border-radius: 0.5em;
+    box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.2);
+
+    .topTitle {
+      font-family: v.$heading-font-family;
+      font-size: 2em;
+      text-decoration: underline;
+    }
+
+    .contactTitle {
+      font-size: 1.1em;
+    }
+
+    .socialLinksList {
+      display: flex;
+      gap: 1.5em;
+      list-style-type: none;
+
+      .socialIconContainer {
+        display: flex;
+        width: 30px;
+        height: 30px;
+        align-items: center;
+        justify-content: center;
+
+        .socialIcon {
+          width: 30px;
+          height: 30px;
+        }
+      }
+    }
+  }
+
+  /*
   .contactForm {
     display: flex;
     flex-direction: column;
@@ -719,18 +760,22 @@
       }
     }  
   }  
+  */
 }
 
 #pageBottom {
   @include mixins.centeredFlexRow;
   width: 100%;
   height: 8em;
-  background-image:  linear-gradient(to left, rgba(v.$dominant-color, 0.3), rgba(v.$accent-color, 0.3)), url("../img/cup-of-coffee.jpg");
+  background-image: linear-gradient(
+      to left,
+      rgba(v.$dominant-color, 0.3),
+      rgba(v.$accent-color, 0.3)
+    ),
+    url("../img/cup-of-coffee.jpg");
   background-size: cover;
 
   .copyright {
     color: v.$secondary-color;
   }
 }
-
-
