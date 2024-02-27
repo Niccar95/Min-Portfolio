@@ -1,5 +1,5 @@
 // vite.config.ts
-import checker from 'vite-plugin-checker'
+import checker from "vite-plugin-checker";
 export default {
   base: "/Min-Portfolio/",
   plugins: [
@@ -8,4 +8,11 @@ export default {
       typescript: true,
     }),
   ],
-}
+  build: {
+    rollupOptions: {
+      input: {
+        projects: "projects.html",
+      },
+    },
+  },
+};
