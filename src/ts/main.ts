@@ -146,3 +146,9 @@ leftArrowButton.addEventListener("click", () => {
   leftArrowButton.disabled = true;
   rightArrowButton.disabled = false;
 });
+
+const viewAllButton = document.querySelector(".viewAllbutton");
+
+viewAllButton?.addEventListener("click", () => {
+  window.location.href = "./projects.html";
+});
