@@ -1,0 +1,176 @@
+@use "variables" as v;
+@use "breakpoints";
+@use "mixins";
+@use "modals";
+@use "headers";
+
+#landingPage {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  @include mixins.verticalCenterFlex;
+  justify-content: flex-start;
+  gap: 1em;
+  height: 100vh;
+
+  /*background-image: linear-gradient(
+      to left,
+      rgba(v.$dominant-color, 0.3),
+      rgba(v.$accent-color, 0.3)
+    ),
+    url("../img/cup-of-coffee.jpg");
+    */
+
+  //background-repeat: no-repeat;
+  //background-size: cover;
+
+  @include breakpoints.desktop() {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    scroll-snap-stop: normal;
+  }
+
+  .navigation {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    height: 100px;
+    top: 0;
+    color: whitesmoke;
+    z-index: 100;
+    transition: all 0.5s;
+    border-bottom: solid 0.5px whitesmoke;
+
+    .hamburger {
+      margin-left: 30px;
+      display: block;
+      cursor: pointer;
+      z-index: 102;
+
+      @include breakpoints.desktop() {
+        display: none;
+        font-size: 1.2em;
+        padding: 12px 15px;
+      }
+    }
+
+    .bar {
+      display: block;
+      width: 25px;
+      height: 3px;
+      margin: 5px auto;
+      -webkit-transition: all 0.3s ease-in-out;
+      transition: all 0.3s ease-in-out;
+      background-color: whitesmoke;
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+      opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+      transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+      transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .navigationList {
+      position: fixed;
+      @include mixins.verticalCenterFlex;
+      justify-content: space-evenly;
+      list-style: none;
+      padding: 10px;
+      transition: 0.5s;
+      right: -100%;
+      top: 100px;
+      width: 100%;
+      height: 170px;
+
+      @include breakpoints.desktop() {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+        right: 0;
+        top: 0;
+        background: transparent !important;
+        height: 100px;
+      }
+
+      .navListItem {
+        text-align: center;
+        width: 100%;
+
+        @include breakpoints.desktop() {
+          width: initial;
+          border: none;
+        }
+
+        .navLink {
+          text-decoration: none;
+          transition: ease-in-out 0.2s;
+          color: whitesmoke;
+        }
+      }
+
+      .navLink:hover {
+        font-size: 1.5em;
+        font-weight: 500;
+      }
+
+      .navLink:visited {
+        color: whitesmoke;
+      }
+    }
+
+    .navigationList.active {
+      right: 0;
+      z-index: 101;
+      background-color: rgba(45, 45, 45, 0.9);
+    }
+  }
+
+  #hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2em;
+    text-align: center;
+    margin-top: 140px;
+    animation: onLoadScale 1s;
+
+    @include breakpoints.desktop() {
+      margin-top: 0;
+    }
+
+    .portfolioPresentation {
+      color: v.$secondary-color;
+      font-family: v.$heading-font-family;
+      font-size: 4em;
+
+      @include breakpoints.desktop() {
+        font-size: 6em;
+      }
+    }
+
+    @keyframes onLoadScale {
+      0% {
+        transform: scale(0);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+  }
+
+  .navScrolled {
+    background-color: rgba(45, 45, 45, 0.9);
+  }
+
+  .hideNav {
+    opacity: 0;
+  }
+}
