@@ -158,11 +158,10 @@
 
   #hero {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column;
     padding: 2em;
     text-align: center;
-    margin-top: 140px;
+    margin-top: 150px;
     animation: onLoadScale 1s;
 
     @include breakpoints.desktop() {
@@ -172,10 +171,19 @@
     .portfolioPresentation {
       color: v.$secondary-color;
       font-family: v.$heading-font-family;
-      font-size: 4em;
+      font-size: 2em;
 
       @include breakpoints.desktop() {
-        font-size: 6em;
+        font-size: 5em;
+      }
+    }
+
+    .myTitle {
+      color: v.$secondary-color;
+      font-size: 3em;
+
+      @include breakpoints.desktop() {
+        font-size: 5em;
       }
     }
 
