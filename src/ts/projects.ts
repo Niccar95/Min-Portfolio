@@ -3,19 +3,9 @@ import { Project } from "./models";
 
 const allProjectsSection = document.getElementById("allProjectsSection");
 
-const todoList = new Project(
-  1,
-  "To-Do List",
-  "blah",
-  "/Min-Portfolio/src/img/todoList.png"
-);
+const todoList = new Project(1, "To-Do List", "blah", "todoList.png");
 
-const pokeSearch = new Project(
-  2,
-  "pokeSearch",
-  "bleh",
-  "/Min-Portfolio/src/img/pokeSearch.png"
-);
+const pokeSearch = new Project(2, "pokeSearch", "bleh", "pokeSearch.png");
 
 let projectList = [todoList, pokeSearch];
 
@@ -24,9 +14,12 @@ projectList.forEach((project) => {
 
   const projectContainer = document.createElement("section");
   //const projectDescription = document.createElement("p");
+  const projectImage = document.createElement("img");
+
+  projectImage.src = project.img.src;
 
   projectContainer.className = "projectContainer";
 
   allProjectsSection?.appendChild(projectContainer);
-  projectContainer.appendChild(project.img);
+  projectContainer.appendChild(projectImage);
 });
