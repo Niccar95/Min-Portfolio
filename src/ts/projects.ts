@@ -18,8 +18,6 @@ projectList.forEach((project) => {
 
   projectImage.src = project.img;
 
-  console.log(todoList.img);
-
   projectContainer.className = "projectContainer";
 
   allProjectsSection?.appendChild(projectContainer);
