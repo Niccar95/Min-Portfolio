@@ -9,7 +9,7 @@ export default {
     }),
   ],
   build: {
-    //assetsDir: "assets",
+    assetsDir: "assets",
     rollupOptions: {
       input: {
         main: "index.html",
