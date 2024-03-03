@@ -14,6 +14,6 @@ export class Project {
     this.projectName = projectName;
     this.description = description;
     this.img = new Image();
-    this.img.src = `./src/img/${imgSrc}`;
+    this.img.src = `/dist/assets/${imgSrc}`;
   }
 }
