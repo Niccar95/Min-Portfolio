@@ -3,9 +3,9 @@ import { Project } from "./models";
 
 const allProjectsSection = document.getElementById("allProjectsSection");
 
-const todoList = new Project(1, "To-Do List", "blah", "img/todoList.png");
+const todoList = new Project(1, "To-Do List", "blah", "todoList.png");
 
-const pokeSearch = new Project(2, "pokeSearch", "bleh", "img/pokeSearch.png");
+const pokeSearch = new Project(2, "pokeSearch", "bleh", "pokeSearch.png");
 
 let projectList = [todoList, pokeSearch];
 
