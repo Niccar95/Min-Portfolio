@@ -5,7 +5,12 @@ const allProjectsSection = document.getElementById("allProjectsSection");
 
 const todoList = new Project(1, "To-Do List", "blah", "todoList.png");
 
-const pokeSearch = new Project(2, "pokeSearch", "bleh", "pokeSearch.png");
+const pokeSearch = new Project(
+  2,
+  "pokeSearch",
+  "bleh",
+  "pokeSearch-985467a5.png"
+);
 
 let projectList = [todoList, pokeSearch];
 
