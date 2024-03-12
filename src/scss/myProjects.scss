@@ -112,15 +112,15 @@
       .summaryContainer {
         display: flex;
         flex-direction: column;
-        justify-content: space-evenly;
+        justify-content: space-between;
         align-items: center;
         width: 50%;
-        padding: 0.5em;
+        padding: 1em 0.5em;
 
         @include breakpoints.desktop() {
-          padding: 1em;
-          justify-content: center;
-          gap: 2.5em;
+          height: 75%;
+          margin-top: 15px;
+          justify-content: space-between;
         }
 
         .projectTitle {
