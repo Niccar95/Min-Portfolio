@@ -59,6 +59,8 @@ window.addEventListener("scroll", () => {
   lastScrollY = window.scrollY;
 });
 
+//modal hanterare
+
 const modalSection1 = document.querySelector(
   ".modalSection1"
 ) as HTMLDialogElement;
@@ -95,6 +97,8 @@ closeModalSection2.addEventListener("click", () => {
   modalSection2.close();
 });
 
+//onmousemove för mus vid hover över projekt containers
+
 const handleOnMouseMove = (e: MouseEvent) => {
   const projectContainer = e.currentTarget as HTMLElement;
   const rect = projectContainer.getBoundingClientRect();
@@ -118,6 +122,8 @@ projectContainers.forEach((projectContainer) => {
     projectContainer.style.removeProperty("--mouse-y");
   });
 });
+
+//functionalitet för pilarna för att scrolla bland kompetenser
 
 const skillPageContainer = document.querySelector(
   ".skillPageContainer"
