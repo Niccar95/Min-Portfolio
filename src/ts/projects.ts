@@ -1,14 +1,19 @@
 import "./../scss/projects.scss";
 import { Project } from "./models";
 
-import todoListImage from "/src/img/todoList.png";
-import pokeSearchImage from "/src/img/pokeSearch.png";
+//import todoListImage from "/src/img/todoList.png";
+//import pokeSearchImage from "/src/img/pokeSearch.png";
 
 const allProjectsSection = document.getElementById("allProjectsSection");
 
-const todoList = new Project(1, "To-Do List", "blah", todoListImage);
+const todoList = new Project(1, "To-Do List", "blah", "/src/img/todoList.png");
 
-const pokeSearch = new Project(2, "pokeSearch", "bleh", pokeSearchImage);
+const pokeSearch = new Project(
+  2,
+  "pokeSearch",
+  "bleh",
+  "/src/img/pokeSearch.png"
+);
 
 let projectList = [todoList, pokeSearch];
 
