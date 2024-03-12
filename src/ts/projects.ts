@@ -6,13 +6,13 @@ import { Project } from "./models";
 
 const allProjectsSection = document.getElementById("allProjectsSection");
 
-const todoList = new Project(1, "To-Do List", "blah", "/src/img/todoList.png");
+const todoList = new Project(1, "To-Do List", "blah", "./src/img/todoList.png");
 
 const pokeSearch = new Project(
   2,
   "pokeSearch",
   "bleh",
-  "/src/img/pokeSearch.png"
+  "./src/img/pokeSearch.png"
 );
 
 let projectList = [todoList, pokeSearch];
