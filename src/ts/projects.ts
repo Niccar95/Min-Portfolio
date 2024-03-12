@@ -4,14 +4,21 @@ import { Project } from "./models/models";
 import todoListImage from "/src/img/todoList.png";
 import pokeSearchImage from "/src/img/pokeSearch.png";
 import todoList2Image from "/src/img/todoList2.png";
+import theWebshopImage from "/src/img/theWebshop.png";
 
 const projectsGallery = document.getElementById("projectsGallery");
 
 const todoList = new Project(1, "To-Do List", "blah", todoListImage);
 const pokeSearch = new Project(2, "pokeSearch", "bleh", pokeSearchImage);
 const todoList2 = new Project(3, "TO-DO List 2.0", "new todo", todoList2Image);
+const theWebshop = new Project(
+  3,
+  "TO-DO List 2.0",
+  "new todo",
+  theWebshopImage
+);
 
-let projectList = [todoList, pokeSearch, todoList2];
+let projectList = [todoList, pokeSearch, todoList2, theWebshop];
 
 projectList.forEach((project) => {
   console.log(project);
