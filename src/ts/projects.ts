@@ -8,21 +8,38 @@ import theWebshopImage from "/src/img/theWebshop.png";
 
 const projectsGallery = document.getElementById("projectsGallery");
 
-const todoList = new Project(1, "To-Do List", "blah", todoListImage);
-const pokeSearch = new Project(2, "PokeSearch", "bleh", pokeSearchImage);
-const todoList2 = new Project(3, "To-Do List 2.0", "new todo", todoList2Image);
+const todoList = new Project(
+  1,
+  "To-Do List",
+  "blah",
+  "JS & SASS",
+  todoListImage
+);
+const pokeSearch = new Project(
+  2,
+  "PokeSearch",
+  "bleh",
+  "JS & SASS",
+  pokeSearchImage
+);
+const todoList2 = new Project(
+  3,
+  "To-Do List 2.0",
+  "new todo",
+  "TS & SASS",
+  todoList2Image
+);
 const theWebshop = new Project(
   4,
   "The Webshop",
   "Grupprojekt. En webshop simulering",
+  "TS & SASS",
   theWebshopImage
 );
 
 let projectList = [todoList, pokeSearch, todoList2, theWebshop];
 
 projectList.forEach((project) => {
-  console.log(project);
-
   const projectContainer = document.createElement("section");
   const imgContainer = document.createElement("section");
 
@@ -31,11 +48,14 @@ projectList.forEach((project) => {
   const projectSummary = document.createElement("p");
   const projectImage = document.createElement("img");
   const seeProjectButton = document.createElement("button");
+  const label = document.createElement("section");
+  const codeTag = document.createElement("p");
 
   projectImage.src = project.img;
   projectTitle.innerHTML = project.projectName;
   projectSummary.innerHTML = project.description;
   seeProjectButton.innerHTML = "Se projektet";
+  codeTag.innerHTML = project.language;
 
   projectContainer.className = "projectContainer";
   imgContainer.className = "imgContainer";
@@ -44,9 +64,8 @@ projectList.forEach((project) => {
   projectTitle.className = "title";
   projectSummary.className = "projectSummary";
   seeProjectButton.className = "seeProjectButton";
-
-  console.log(window.getComputedStyle(projectTitle).fontSize);
-  console.log(window.getComputedStyle(projectSummary).fontSize);
+  label.className = "label";
+  codeTag.className = "codeTag";
 
   if (projectsGallery) {
     projectsGallery.className = "projectsGallery";
@@ -56,6 +75,8 @@ projectList.forEach((project) => {
   projectContainer.appendChild(imgContainer);
   imgContainer.appendChild(projectImage);
   projectContainer.appendChild(summaryContainer);
+  projectContainer.appendChild(label);
+  label.appendChild(codeTag);
   summaryContainer.appendChild(projectTitle);
   summaryContainer.appendChild(projectSummary);
   summaryContainer.appendChild(seeProjectButton);
