@@ -37,7 +37,7 @@ const theWebshop = new Project(
   theWebshopImage
 );
 
-let projectList = [todoList, pokeSearch, todoList2, theWebshop];
+let projectList = [todoList2, pokeSearch, theWebshop, todoList];
 
 projectList.forEach((project) => {
   const projectContainer = document.createElement("section");
@@ -50,12 +50,19 @@ projectList.forEach((project) => {
   const seeProjectButton = document.createElement("button");
   const label = document.createElement("section");
   const codeTag = document.createElement("p");
+  const modalSection = document.createElement("dialog");
+  const modalContent = document.createElement("section");
+  const modalImg = document.createElement("img");
+  const modalCloseButton = document.createElement("button");
 
   projectImage.src = project.img;
   projectTitle.innerHTML = project.projectName;
   projectSummary.innerHTML = project.description;
   seeProjectButton.innerHTML = "Se projektet";
   codeTag.innerHTML = project.language;
+
+  modalImg.src = project.img;
+  modalCloseButton.innerHTML = "Stäng";
 
   projectContainer.className = "projectContainer";
   imgContainer.className = "imgContainer";
@@ -67,11 +74,28 @@ projectList.forEach((project) => {
   label.className = "label";
   codeTag.className = "codeTag";
 
+  modalSection.className = "modalSection";
+  modalContent.className = "modalContent";
+  modalImg.className = "modalImg";
+  modalCloseButton.className = "modalCloseButton";
+
+  imgContainer.addEventListener("click", () => {
+    modalSection.showModal();
+  });
+
+  modalCloseButton.addEventListener("click", () => {
+    modalSection.close();
+  });
+
   if (projectsGallery) {
     projectsGallery.className = "projectsGallery";
   }
 
   projectsGallery?.appendChild(projectContainer);
+  projectsGallery?.appendChild(modalSection);
+  modalSection.appendChild(modalContent);
+  modalContent.appendChild(modalImg);
+  modalContent.appendChild(modalCloseButton);
   projectContainer.appendChild(imgContainer);
   imgContainer.appendChild(projectImage);
   projectContainer.appendChild(summaryContainer);
