@@ -138,21 +138,21 @@ body {
     @include breakpoints.desktop() {
       scroll-snap-stop: normal;
       gap: 1.5em;
+      padding: 2em;
     }
 
     .projectsGallery {
       width: 100%;
-      height: 70%;
       display: flex;
       flex-direction: column;
       gap: 1em;
       align-items: center;
 
       @include breakpoints.desktop() {
-        @include mixins.centeredFlexRow;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 420px);
         gap: 1.5em;
-        height: 60%;
-        width: 90%;
       }
 
       .modalSection {
@@ -180,6 +180,30 @@ body {
             border: 2px solid lightgrey;
             border-radius: 0.5em;
             width: 100%;
+          }
+
+          .modalCloseButton {
+            padding: 6px 30px;
+            border-radius: 2em;
+            font-size: 0.8em;
+            border: 5px double v.$accent-color;
+            box-shadow: 0 0 8px v.$accent-color;
+            cursor: pointer;
+            transition: all 0.3s;
+
+            @include breakpoints.desktop() {
+              font-size: 1em;
+            }
+          }
+
+          .modalCloseButton:hover {
+            color: v.$accent-color;
+            box-shadow: 0 0 20px v.$accent-color;
+          }
+
+          .modalCloseButton:active {
+            border: 5px solid;
+            background-color: rgba(v.$accent-color, 0.2);
           }
         }
       }
@@ -279,28 +303,33 @@ body {
           display: flex;
           flex-direction: column;
           justify-content: space-between;
-          align-items: center;
+          align-items: flex-start;
           width: 50%;
           padding: 1em 0.5em;
 
           @include breakpoints.desktop() {
-            height: 75%;
+            height: 80%;
             margin-top: 15px;
-            justify-content: space-between;
+            align-items: flex-start;
+            justify-content: space-evenly;
           }
 
-          .title {
+          .projectTitle {
             font-family: v.$heading-font-family;
-            font-size: 1.8em;
+            font-size: 1.5em;
+            width: 90%;
+            text-align: center;
 
             @include breakpoints.desktop() {
-              font-size: 2.5em;
+              width: 75%;
+              text-align: center;
+              font-size: 2.2em;
             }
           }
 
           .projectSummary {
             font-size: 0.8em;
-            text-align: center;
+            padding: 0.3em;
 
             @include breakpoints.desktop() {
               font-size: 1em;

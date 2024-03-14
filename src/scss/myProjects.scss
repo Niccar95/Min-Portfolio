@@ -51,7 +51,7 @@
       @include mixins.centeredFlexRow;
       gap: 1.5em;
       height: 60%;
-      width: 90%;
+      width: 95%;
     }
 
     .projectContainer {
@@ -70,7 +70,7 @@
       );
 
       @include breakpoints.desktop() {
-        height: 100%;
+        height: 420px;
       }
 
       .imgContainer {
@@ -113,28 +113,33 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        align-items: center;
+        align-items: flex-start;
         width: 50%;
         padding: 1em 0.5em;
 
         @include breakpoints.desktop() {
-          height: 75%;
+          height: 80%;
           margin-top: 15px;
-          justify-content: space-between;
+          align-items: flex-start;
+          justify-content: space-evenly;
         }
 
         .projectTitle {
           font-family: v.$heading-font-family;
-          font-size: 1.8em;
+          font-size: 1.5em;
+          width: 90%;
+          text-align: center;
 
           @include breakpoints.desktop() {
-            font-size: 2.5em;
+            width: 75%;
+            text-align: center;
+            font-size: 2.2em;
           }
         }
 
         .projectSummary {
           font-size: 0.8em;
-          text-align: center;
+          padding: 0.3em;
 
           @include breakpoints.desktop() {
             font-size: 1em;

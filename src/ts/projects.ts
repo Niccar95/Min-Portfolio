@@ -11,28 +11,28 @@ const projectsGallery = document.getElementById("projectsGallery");
 const todoList = new Project(
   1,
   "To-Do List",
-  "blah",
+  'Mitt första skolprojekt. Skapa din egna "att göra" lista.',
   "JS & SASS",
   todoListImage
 );
 const pokeSearch = new Project(
   2,
   "PokeSearch",
-  "bleh",
+  "Personligt projekt. Hitta så många Pokemon du kan innan tiden är slut!",
   "JS & SASS",
   pokeSearchImage
 );
 const todoList2 = new Project(
   3,
   "To-Do List 2.0",
-  "new todo",
+  'Min nya "att göra" lista. Alla "tasks" sparas i localstorage och kan sorteras.',
   "TS & SASS",
   todoList2Image
 );
 const theWebshop = new Project(
   4,
   "The Webshop",
-  "Grupprojekt. En webshop simulering",
+  "Grupprojekt. Simulering av en webbshopp.",
   "TS & SASS",
   theWebshopImage
 );
@@ -68,7 +68,7 @@ projectList.forEach((project) => {
   imgContainer.className = "imgContainer";
   projectImage.className = "projectImage";
   summaryContainer.className = "summaryContainer";
-  projectTitle.className = "title";
+  projectTitle.className = "projectTitle";
   projectSummary.className = "projectSummary";
   seeProjectButton.className = "seeProjectButton";
   label.className = "label";
