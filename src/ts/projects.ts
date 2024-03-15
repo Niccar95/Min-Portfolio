@@ -1,5 +1,5 @@
 import "./../scss/projects.scss";
-import { Project } from "./models/models";
+import { Project } from "./models/Project";
 
 import todoListImage from "/src/img/todoList.png";
 import pokeSearchImage from "/src/img/pokeSearch.png";
@@ -12,29 +12,33 @@ const todoList = new Project(
   1,
   "To-Do List",
   'Mitt första skolprojekt. Skapa din egna "att göra" lista.',
-  "JS & SASS",
-  todoListImage
+  "Sass & JS",
+  todoListImage,
+  "https://niccar95.github.io/todo-list/"
 );
 const pokeSearch = new Project(
   2,
   "PokeSearch",
   "Personligt projekt. Hitta så många Pokemon du kan innan tiden är slut!",
-  "JS & SASS",
-  pokeSearchImage
+  "Sass & JS",
+  pokeSearchImage,
+  "https://niccar95.github.io/PokeSearch/"
 );
 const todoList2 = new Project(
   3,
   "To-Do List 2.0",
   'Min nya "att göra" lista. Alla "tasks" sparas i localstorage och kan sorteras.',
-  "TS & SASS",
-  todoList2Image
+  "Sass & TS",
+  todoList2Image,
+  "https://niccar95.github.io/To-Do-List-2.0/"
 );
 const theWebshop = new Project(
   4,
   "The Webshop",
-  "Grupprojekt. Simulering av en webbshopp.",
-  "TS & SASS",
-  theWebshopImage
+  'Mitt första grupprojekt. Simulera ett köp med "The Webshop."',
+  "SaSS & TS",
+  theWebshopImage,
+  "https://niccar95.github.io/the-webshop-team-5/"
 );
 
 let projectList = [todoList2, pokeSearch, theWebshop, todoList];
@@ -78,6 +82,10 @@ projectList.forEach((project) => {
   modalContent.className = "modalContent";
   modalImg.className = "modalImg";
   modalCloseButton.className = "modalCloseButton";
+
+  seeProjectButton.addEventListener("click", () => {
+    window.location.href = project.link;
+  });
 
   imgContainer.addEventListener("click", () => {
     modalSection.showModal();
