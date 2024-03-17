@@ -3,6 +3,7 @@
 @use "mixins";
 @use "modals";
 @use "headers";
+@use "navigation";
 
 #landingPage {
   scroll-snap-align: start;
@@ -28,109 +29,6 @@
     flex-direction: column;
     justify-content: center;
     scroll-snap-stop: normal;
-  }
-
-  .navigation {
-    position: fixed;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    width: 100%;
-    height: 100px;
-    top: 0;
-    color: whitesmoke;
-    z-index: 100;
-    transition: all 0.5s;
-    border-bottom: solid 0.5px whitesmoke;
-
-    .hamburger {
-      margin-left: 30px;
-      display: block;
-      cursor: pointer;
-      z-index: 102;
-
-      @include breakpoints.desktop() {
-        display: none;
-        font-size: 1.2em;
-        padding: 12px 15px;
-      }
-    }
-
-    .bar {
-      display: block;
-      width: 25px;
-      height: 3px;
-      margin: 5px auto;
-      -webkit-transition: all 0.3s ease-in-out;
-      transition: all 0.3s ease-in-out;
-      background-color: whitesmoke;
-    }
-
-    .hamburger.active .bar:nth-child(2) {
-      opacity: 0;
-    }
-
-    .hamburger.active .bar:nth-child(1) {
-      transform: translateY(8px) rotate(45deg);
-    }
-
-    .hamburger.active .bar:nth-child(3) {
-      transform: translateY(-8px) rotate(-45deg);
-    }
-
-    .navigationList {
-      position: fixed;
-      @include mixins.verticalCenterFlex;
-      justify-content: space-evenly;
-      list-style: none;
-      padding: 10px;
-      transition: 0.5s;
-      right: -100%;
-      top: 100px;
-      width: 100%;
-      height: 170px;
-
-      @include breakpoints.desktop() {
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-evenly;
-        right: 0;
-        top: 0;
-        background: transparent !important;
-        height: 100px;
-      }
-
-      .navListItem {
-        text-align: center;
-        width: 100%;
-
-        @include breakpoints.desktop() {
-          width: initial;
-          border: none;
-        }
-
-        .navLink {
-          text-decoration: none;
-          transition: ease-in-out 0.2s;
-          color: whitesmoke;
-        }
-      }
-
-      .navLink:hover {
-        font-size: 1.5em;
-        font-weight: 500;
-      }
-
-      .navLink:visited {
-        color: whitesmoke;
-      }
-    }
-
-    .navigationList.active {
-      right: 0;
-      z-index: 101;
-      background-color: rgba(45, 45, 45, 0.9);
-    }
   }
 
   #myVideo {
