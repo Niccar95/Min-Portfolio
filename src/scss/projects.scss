@@ -1,6 +1,9 @@
 @use "breakpoints";
 @use "variables" as v;
 @use "mixins";
+@use "navigation";
+@use "landingPage";
+@use "buttons";
 
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500;700&display=swap");
 
@@ -13,119 +16,13 @@
   font-size: v.$base-font-size;
   line-height: 1.5;
   font-weight: 400;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 body {
   display: flex;
   flex-direction: column;
-  gap: 2em;
-
-  /*
-
-.navigation {
-  position: fixed;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  width: 100%;
-  height: 100px;
-  top: 0;
-  color: whitesmoke;
-  z-index: 100;
-  transition: all 0.5s;
-  border-bottom: solid 0.5px whitesmoke;
-
-  .hamburger {
-    margin-left: 30px;
-    display: block;
-    cursor: pointer;
-    z-index: 102;
-
-    @include breakpoints.desktop() {
-      display: none;
-      font-size: 1.2em;
-      padding: 12px 15px;
-    }
-  }
-
-  .bar {
-    display: block;
-    width: 25px;
-    height: 3px;
-    margin: 5px auto;
-    -webkit-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
-    background-color: whitesmoke;
-  }
-
-  .hamburger.active .bar:nth-child(2) {
-    opacity: 0;
-  }
-
-  .hamburger.active .bar:nth-child(1) {
-    transform: translateY(8px) rotate(45deg);
-  }
-
-  .hamburger.active .bar:nth-child(3) {
-    transform: translateY(-8px) rotate(-45deg);
-  }
-
-  .navigationList {
-    position: fixed;
-    @include mixins.verticalCenterFlex;
-    justify-content: space-evenly;
-    list-style: none;
-    padding: 10px;
-    transition: 0.5s;
-    right: -100%;
-    top: 100px;
-    width: 100%;
-    height: 170px;
-
-    @include breakpoints.desktop() {
-      flex-direction: row;
-      align-items: center;
-      justify-content: space-evenly;
-      right: 0;
-      top: 0;
-      background-color: v.$navigationColor;
-      height: 100px;
-    }
-
-    .navListItem {
-      text-align: center;
-      width: 100%;
-
-      @include breakpoints.desktop() {
-        width: initial;
-        border: none;
-      }
-
-      .navLink {
-        text-decoration: none;
-        transition: ease-in-out 0.2s;
-        color: whitesmoke;
-      }
-    }
-
-    .navLink:hover {
-      font-size: 1.5em;
-      font-weight: 500;
-    }
-
-    .navLink:visited {
-      color: whitesmoke;
-    }
-  }
-
-  .navigationList.active {
-    right: 0;
-    z-index: 101;
-    background-color: rgba(45, 45, 45, 0.9);
-  }
-}
-
-*/
 
   #allProjects {
     scroll-snap-align: start;
@@ -133,12 +30,10 @@ body {
     @include mixins.verticalCenterFlex;
     gap: 1em;
     background-color: whitesmoke;
-    padding: 1em;
 
     @include breakpoints.desktop() {
       scroll-snap-stop: normal;
       gap: 1.5em;
-      padding: 2em;
     }
 
     .projectsGallery {
@@ -147,11 +42,13 @@ body {
       flex-direction: column;
       gap: 1.5em;
       align-items: center;
+      padding: 1em;
 
       @include breakpoints.desktop() {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(2, 420px);
+        padding: 2em;
       }
 
       .modalSection {

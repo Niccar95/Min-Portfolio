@@ -10,31 +10,38 @@
     <link rel="manifest" href="/site.webmanifest" />
   </head>
   <body>
-    <nav class="navigation" class="navScrolled" class="hideNav">
-      <section class="hamburger">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
+    <header id="landingPage" class="mainSection">
+      <nav class="navigation" class="navScrolled" class="hideNav">
+        <section class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </section>
+
+        <ul class="navigationList">
+          <li class="navListItem">
+            <a class="navLink" href="#landingPage">Hem</a>
+          </li>
+
+          <li class="navListItem">
+            <a class="navLink" href="#aboutMe">Alla projekt</a>
+          </li>
+        </ul>
+      </nav>
+
+      <video autoplay muted loop id="myVideo">
+        <source src="./src/video/code.mp4" type="video/mp4" />
+        Your browser does not support HTML5 video.
+      </video>
+
+      <div class="overlay"></div>
+
+      <section id="hero">
+        <h2 class="myTitle">Mina Projekt</h2>
       </section>
 
-      <ul class="navigationList">
-        <li class="navListItem">
-          <a class="navLink" href="#landingPage">Hem</a>
-        </li>
-
-        <li class="navListItem">
-          <a class="navLink" href="#aboutMe">Om Mig</a>
-        </li>
-
-        <li class="navListItem">
-          <a class="navLink" href="#myProjects">Mina Projekt</a>
-        </li>
-
-        <li class="navListItem">
-          <a class="navLink" href="#contactMe">Kontakt</a>
-        </li>
-      </ul>
-    </nav>
+      <a href="#allProjects"><button class="resumeButton">Läs mer</button></a>
+    </header>
     <section id="allProjects">
       <section id="projectsGallery"></section>
     </section>

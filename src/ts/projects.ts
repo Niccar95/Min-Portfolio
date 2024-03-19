@@ -5,8 +5,11 @@ import todoListImage from "/src/img/todoList.png";
 import pokeSearchImage from "/src/img/pokeSearch.png";
 import todoList2Image from "/src/img/todoList2.png";
 import theWebshopImage from "/src/img/theWebshop.png";
+import { navigationHandler } from "./navigationHandler";
 
 const projectsGallery = document.getElementById("projectsGallery");
+
+navigationHandler();
 
 const todoList = new Project(
   1,
